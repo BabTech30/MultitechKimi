@@ -1,222 +1,504 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" itemscope itemtype="https://schema.org/LocalBusiness">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multitech34 - Plombier Chauffagiste RGE & Climatisation à Montpellier et 25km</title>
-    <meta name="description" content="Bastien de Multitech34 : Artisan expert RGE QualiPAC pour vos urgences et projets à Montpellier et 25km alentours. Plomberie, Climatisation, Chauffage et Dépannage multiservices 24/7.">
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Plombier Chauffagiste Montpellier Lattes | Urgence 24/7 & Rénovation | Multitech34</title>
+    
+    <meta name="description" content="Bastien, artisan expert RGE QualiPAC à Lattes et Montpellier (+25km). Dépannage plomberie 24/7, installation Clim & Chauffage, recherche de fuite. Devis gratuit.">
+    
+    <meta name="keywords" content="plombier montpellier, chauffagiste lattes, urgence fuite 34, RGE QualiPAC, installation climatisation, débouchage canalisation, artisan multiservices hérault">
+    
+    <meta property="og:title" content="Multitech34 - L'Expertise Plomberie & Clim à Montpellier">
+    <meta property="og:description" content="Intervention rapide 24/7. Bastien, votre artisan certifié RGE pour tous travaux de plomberie, chauffage et multiservices.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://multitech34.fr">
+    <meta property="og:image" content="https://multitech34.fr/images/og-image.jpg"> <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1a5f4a',    /* Vert/Teal Professionnel */
+                        'primary-dark': '#144a39',
+                        'secondary': '#16a085',  /* Vert d'eau */
+                        'accent': '#f39c12',     /* Orange Urgence/Action */
+                        'accent-hover': '#d35400',
+                        'dark': '#2c3e50'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["Plumber", "HVACBusiness", "GeneralContractor"],
+        "name": "Multitech34",
+        "image": "https://multitech34.fr/logo.png",
+        "telephone": "+33649955298",
+        "url": "https://multitech34.fr",
+        "priceRange": "€€",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "18 plan de New York",
+            "addressLocality": "Lattes",
+            "postalCode": "34970",
+            "addressCountry": "FR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 43.5684,
+            "longitude": 3.9022
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+        },
+        "areaServed": [
+            { "@type": "City", "name": "Lattes" },
+            { "@type": "City", "name": "Montpellier" },
+            { "@type": "City", "name": "Castelnau-le-Lez" },
+            { "@type": "City", "name": "Pérols" },
+            { "@type": "City", "name": "Mauguio" },
+            { "@type": "City", "name": "Palavas-les-Flots" }
+        ],
+        "founder": {
+            "@type": "Person",
+            "name": "Bastien"
+        },
+        "knowsAbout": ["Plomberie", "Chauffage", "Climatisation", "Recherche de fuite", "RGE", "QualiPAC", "Multiservices"],
+        "brand": {
+            "@type": "Brand",
+            "name": "Multitech34"
+        }
+    }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        /* Animation d'apparition douce */
+        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        
+        /* Effet de verre pour le menu mobile */
+        .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        
+        /* Correction hauteur mobile */
+        .min-h-screen-mobile { min-height: 100vh; min-height: 100dvh; }
+    </style>
 </head>
-<body>
-    <header class="bg-white shadow-md fixed w-full z-10 top-0">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <a href="index.html" class="text-2xl font-bold text-primary mr-4">Multitech34</a>
-                <div class="hidden md:flex space-x-2">
-                    <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full border border-green-600 font-semibold">RGE Certifié</span>
-                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full border border-blue-600 font-semibold">QualiPAC</span>
-                </div>
-            </div>
-            <nav class="hidden md:flex space-x-6">
-                <a href="index.html" class="font-semibold text-secondary">Accueil</a>
-                <a href="plomberie.html" class="hover:text-secondary transition">Plomberie</a>
-                <a href="chauffage.html" class="hover:text-secondary transition">Chauffage</a>
-                <a href="climatisation.html" class="hover:text-secondary transition">Climatisation</a>
-                <a href="#contrats" class="hover:text-secondary transition text-accent">Contrats & Boutique</a>
-                <a href="contact.html" class="hover:text-secondary transition">Contact</a>
-            </nav>
-            <a href="tel:+33600000000" class="bg-accent hover:bg-orange-600 text-white px-4 py-2 rounded transition hidden md:block font-bold">
-                <i class="fas fa-phone-alt mr-2"></i>Urgence 24/7
-            </a>
-        </div>
-    </header>
 
-    <main class="mt-16">
-        <section id="hero" class="bg-cover bg-center h-[90vh] flex items-center relative" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
-            <div class="absolute inset-0 bg-black opacity-60"></div>
-            <div class="container mx-auto px-4 text-center relative z-10 text-white">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-                    L'Expertise Technique à Montpellier : <br>
-                    <span class="text-accent">Plomberie, Clim, Chauffage & Multiservices.</span>
-                </h1>
-                <p class="text-xl mb-8 max-w-2xl mx-auto">
-                    Intervention d'urgence 24/7 ou projets de rénovation énergétique RGE. 
-                    Bastien, votre artisan de confiance sur Montpellier et 25km alentours.
-                </p>
-                <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
-                    <a href="#services" class="bg-secondary hover:bg-secondary-dark text-white px-8 py-3 rounded text-lg transition font-semibold">
-                        Voir mes expertises
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex flex-col">
+                        <span class="text-2xl font-bold text-primary tracking-tight">Multitech34</span>
+                        <span class="text-xs text-gray-500 font-medium">Bastien - Artisan Expert</span>
                     </a>
-                    <a href="contact.html" class="bg-white text-secondary hover:bg-gray-100 px-8 py-3 rounded text-lg transition font-semibold border-2 border-secondary">
-                        Demander un devis gratuit
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="presentation" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
-                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Bastien artisan Multitech34 en intervention à Montpellier" class="rounded-lg shadow-xl">
-                </div>
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl font-bold text-primary mb-6">Plus qu'un plombier : Votre expert multitechnique de proximité.</h2>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        Bonjour, je suis Bastien. À Montpellier et dans un rayon de 25km (Lattes, Pérols, Mauguio...), je ne suis pas juste "le plombier qu'on appelle en panique". Je suis votre partenaire technique global.
-                    </p>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        Fort de mes certifications **RGE QualiPAC et QualiPV**, je maîtrise les systèmes complexes d'aujourd'hui (pompes à chaleur, climatisation gainable) tout en assurant les dépannages du quotidien avec réactivité. Mon approche "multiservices" me permet aussi de gérer les petits travaux annexes (électricité, serrurerie, petite maçonnerie) pour vous éviter de multiplier les interlocuteurs.
-                    </p>
-                    <p class="font-semibold text-secondary">
-                        Ma promesse ? Un travail soigné, des tarifs transparents, et du matériel de grande marque pour une tranquillité durable.
-                    </p>
-                    <div class="flex mt-8 space-x-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-secondary mr-2 text-xl"></i>
-                            <span class="font-bold">Certifié RGE</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-map-marker-alt text-secondary mr-2 text-xl"></i>
-                            <span class="font-bold">Zone 25km</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-clock text-secondary mr-2 text-xl"></i>
-                            <span class="font-bold">Astreinte Pro</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="py-20">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold text-primary mb-12">Mes Domaines d'Intervention Principaux</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition border-t-4 border-secondary">
-                        <i class="fas fa-faucet text-5xl text-secondary mb-6"></i>
-                        <h3 class="text-2xl font-bold mb-4">Plomberie & Sanitaire</h3>
-                        <p class="text-gray-700 mb-6">
-                            De la recherche de fuite non destructive au débouchage de canalisation, en passant par la création de salle de bain clé en main. Intervention rapide et soignée.
-                        </p>
-                        <a href="plomberie.html" class="text-secondary font-semibold hover:underline">En savoir plus &rarr;</a>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition border-t-4 border-accent">
-                        <i class="fas fa-fire text-5xl text-accent mb-6"></i>
-                        <h3 class="text-2xl font-bold mb-4">Chauffage RGE & Pompes à Chaleur</h3>
-                        <p class="text-gray-700 mb-6">
-                            Expert certifié QualiPAC pour l'installation et l'entretien de vos pompes à chaleur et chaudières. Optimisez votre confort et réduisez vos factures énergétiques.
-                        </p>
-                        <a href="chauffage.html" class="text-accent font-semibold hover:underline">Solutions de chauffage &rarr;</a>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition border-t-4 border-secondary">
-                        <i class="fas fa-snowflake text-5xl text-secondary mb-6"></i>
-                        <h3 class="text-2xl font-bold mb-4">Climatisation & Ventilation</h3>
-                        <p class="text-gray-700 mb-6">
-                            Installation de climatiseurs (splits, gainables) de grandes marques. Entretien rigoureux pour garantir la qualité de l'air et la longévité de votre matériel.
-                        </p>
-                        <a href="climatisation.html" class="text-secondary font-semibold hover:underline">Nos offres climatisation &rarr;</a>
+                    <div class="hidden lg:flex ml-6 space-x-2">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 border border-green-200">
+                            <i class="fas fa-leaf mr-1"></i> RGE Certifié
+                        </span>
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 border border-blue-200">
+                            <i class="fas fa-check-circle mr-1"></i> QualiPAC
+                        </span>
                     </div>
                 </div>
                 
-                <div class="mt-12 bg-gray-100 p-8 rounded-lg shadow-inner text-left flex flex-col md:flex-row items-center justify-between">
-                    <div>
-                        <h3 class="text-2xl font-bold text-primary mb-2"><i class="fas fa-tools mr-3"></i>Dépannage Multiservices & Astreinte Pro</h3>
-                        <p class="text-gray-700 max-w-2xl">
-                            Besoin d'un expert polyvalent pour de la petite électricité, serrurerie ou maçonnerie ? 
-                            <br>Je propose aussi des <strong>contrats d'astreinte dédiés aux syndics et bailleurs</strong> pour une sérénité totale la nuit et le week-end.
-                        </p>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-primary font-bold border-b-2 border-primary pb-1">Accueil</a>
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-primary font-medium flex items-center">
+                            Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-xl py-2 hidden group-hover:block border border-gray-100">
+                            <a href="plomberie.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Plomberie</a>
+                            <a href="chauffage.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Chauffage & PAC</a>
+                            <a href="climatisation.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Climatisation</a>
+                        </div>
                     </div>
-                    <a href="contact.html" class="mt-6 md:mt-0 bg-primary text-white px-6 py-3 rounded hover:bg-primary-dark transition font-semibold">
-                        Contacter pour un contrat pro
+                    <a href="#tarifs" class="text-gray-600 hover:text-primary font-medium transition">Tarifs</a>
+                    <a href="#boutique" class="text-gray-600 hover:text-accent font-medium transition flex items-center">
+                        <i class="fas fa-shopping-basket mr-1"></i> Boutique
+                    </a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary font-medium transition">Contact</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="tel:0649955298" class="inline-flex items-center px-5 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-accent hover:bg-accent-hover shadow-md transition-all transform hover:scale-105 animate-pulse-slow">
+                        <i class="fas fa-phone-alt mr-2"></i> URGENCE 24/7
+                    </a>
+                </div>
+                
+                <div class="md:hidden flex items-center">
+                    <a href="tel:0649955298" class="mr-4 text-accent font-bold text-lg animate-pulse">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="md:hidden hidden glass-effect border-t">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-bold text-primary bg-green-50">Accueil</a>
+                <a href="plomberie.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Plomberie & Fuites</a>
+                <a href="chauffage.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Chauffage & RGE</a>
+                <a href="climatisation.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Climatisation</a>
+                <a href="#boutique" class="block px-3 py-3 rounded-md text-base font-medium text-accent hover:bg-orange-50">Contrats & Boutique</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Demander un Devis</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-primary">
+        <div class="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary to-transparent z-0 opacity-90"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-white">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-up">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full border border-green-300 bg-green-900/30 text-green-100 text-sm font-medium mb-6 backdrop-blur-sm">
+                        <span class="flex h-2 w-2 rounded-full bg-green-400 mr-2"></span>
+                        Disponible maintenant sur Montpellier & +25km
+                    </div>
+                    <h1 class="text-4xl lg:text-6xl font-extrabold mb-6 leading-tight tracking-tight">
+                        L'Expertise Technique <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-white">Proche de Vous.</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-green-50 font-light leading-relaxed max-w-xl">
+                        Plomberie, Chauffage, Climatisation & Multiservices.
+                        <br><strong>Bastien, votre artisan certifié RGE</strong> pour vos urgences 24/7 et vos projets de rénovation énergétique.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="tel:0649955298" class="inline-flex justify-center items-center px-8 py-4 bg-accent text-white text-lg font-bold rounded-xl hover:bg-accent-hover transition-all transform hover:-translate-y-1 shadow-lg shadow-orange-900/20">
+                            <i class="fas fa-phone-alt mr-3"></i> 06 49 95 52 98
+                        </a>
+                        <a href="contact.html" class="inline-flex justify-center items-center px-8 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white text-lg font-semibold rounded-xl hover:bg-white/20 transition-all">
+                            <i class="fas fa-file-signature mr-3"></i> Devis Gratuit
+                        </a>
+                    </div>
+                    
+                    <div class="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-8">
+                        <div>
+                            <div class="text-2xl font-bold text-accent">24/7</div>
+                            <div class="text-sm text-green-200">Dépannage</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-accent">30min</div>
+                            <div class="text-sm text-green-200">Intervention</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-accent">100%</div>
+                            <div class="text-sm text-green-200">Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:block relative fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-accent to-secondary rounded-2xl blur opacity-30"></div>
+                    <div class="relative bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+                        <h3 class="text-xl font-bold mb-6 flex items-center">
+                            <i class="fas fa-bolt text-accent mr-3"></i> Interventions Fréquentes
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center p-3 bg-white/5 rounded-lg hover:bg-white/10 transition cursor-default">
+                                <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center mr-4">
+                                    <i class="fas fa-tint text-blue-300"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold">Recherche de Fuite</div>
+                                    <div class="text-xs text-blue-200">Méthode non destructive</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center p-3 bg-white/5 rounded-lg hover:bg-white/10 transition cursor-default">
+                                <div class="w-10 h-10 rounded-full bg-orange-500/20 flex items-center justify-center mr-4">
+                                    <i class="fas fa-fire text-orange-300"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold">Panne Chaudière / PAC</div>
+                                    <div class="text-xs text-orange-200">Toutes marques</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center p-3 bg-white/5 rounded-lg hover:bg-white/10 transition cursor-default">
+                                <div class="w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center mr-4">
+                                    <i class="fas fa-snowflake text-cyan-300"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold">Entretien Climatisation</div>
+                                    <div class="text-xs text-cyan-200">Nettoyage & recharge</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-accent/20 rounded-full z-0"></div>
+                        <img src="https://images.unsplash.com/photo-1581578731117-104f2a41272e?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Bastien Multitech34 Plombier Montpellier" 
+                             class="relative z-10 rounded-2xl shadow-2xl w-full object-cover h-[500px]">
+                        <div class="absolute bottom-6 right-6 z-20 bg-white p-4 rounded-xl shadow-lg border-l-4 border-primary">
+                            <p class="font-bold text-gray-900">Bastien</p>
+                            <p class="text-sm text-gray-600">Gérant & Artisan</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Plus qu'un technicien, <br>
+                        <span class="text-primary">votre partenaire de confiance.</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Bonjour, je suis <strong>Bastien</strong>. Je sais qu'appeler un plombier est souvent source de stress. C'est pourquoi j'ai fondé <strong>Multitech34</strong> avec une vision simple : allier l'excellence technique à l'honnêteté humaine.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Basé à Lattes, j'interviens personnellement ou avec mon équipe qualifiée dans un rayon de <strong>25km</strong> (Montpellier, Castelnau, Mauguio...). Je ne suis pas une plateforme impersonnelle : quand vous m'appelez, je connais votre dossier.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-accent mr-3 text-xl"></i>
+                            <span class="font-medium">Certifié RGE & QualiPAC</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-accent mr-3 text-xl"></i>
+                            <span class="font-medium">Matériel de Qualité</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-accent mr-3 text-xl"></i>
+                            <span class="font-medium">Devis Transparents</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-accent mr-3 text-xl"></i>
+                            <span class="font-medium">Astreinte Pro & Syndic</span>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="text-primary font-bold hover:text-primary-dark underline decoration-2 underline-offset-4">
+                        Discuter de votre projet &rarr;
                     </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contrats" class="py-16 bg-secondary text-white">
-             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold mb-6">Entretenir pour durer : Simplifiez-vous la vie</h2>
-                <p class="text-xl mb-8 max-w-3xl mx-auto">
-                    Bientôt disponible ici : Souscrivez en ligne à nos <strong>contrats d'entretien annuels</strong> (Clim, PAC) et commandez nos <strong>Kits d'entretien professionnels</strong> avec guides vidéo pour prendre soin de votre matériel vous-même.
-                </p>
-                <span class="bg-white text-secondary px-6 py-2 rounded-full font-semibold text-sm uppercase tracking-wider">Arrive Prochainement</span>
+    <section class="py-20 bg-gray-50" id="services">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-accent font-bold uppercase tracking-wider text-sm">Mes Domaines d'Expertise</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Solutions Complètes pour l'Habitat</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Du dépannage urgent à l'installation complexe, je maîtrise l'ensemble de la chaîne technique.</p>
             </div>
-        </section>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center text-primary text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Plomberie & Sanitaire</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Recherche de fuite non destructive, débouchage canalisation, réparation chauffe-eau, création de salle de bain.
+                    </p>
+                    <a href="plomberie.html" class="inline-flex items-center text-primary font-bold hover:text-accent transition">
+                        Détails et Tarifs <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </article>
 
-    </main>
+                <article class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Chauffage & RGE</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Installation Pompe à Chaleur (PAC), entretien chaudière gaz, désembouage, optimisation énergétique certifiée RGE.
+                    </p>
+                    <a href="chauffage.html" class="inline-flex items-center text-blue-600 font-bold hover:text-accent transition">
+                        Nos solutions RGE <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </article>
 
-    <footer class="bg-primary text-white py-12">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-                <h3 class="text-2xl font-bold mb-4">Multitech34</h3>
-                <p class="mb-4">Votre artisan de confiance pour tous travaux de plomberie, chauffage et climatisation à Montpellier.</p>
-                <div class="flex space-x-2 mt-4">
-                    <span class="text-xs bg-white text-primary px-2 py-1 rounded border border-gray-300">RGE QualiPAC</span>
-                    <span class="text-xs bg-white text-primary px-2 py-1 rounded border border-gray-300">QualiPV</span>
+                <article class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="w-14 h-14 bg-cyan-50 rounded-xl flex items-center justify-center text-cyan-600 text-2xl mb-6 group-hover:bg-cyan-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Climatisation</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Installation de clim réversible (Split/Gainable), mise en service, entretien annuel antibactérien, dépannage.
+                    </p>
+                    <a href="climatisation.html" class="inline-flex items-center text-cyan-600 font-bold hover:text-accent transition">
+                        Voir les offres <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </article>
+            </div>
+
+            <div class="mt-10 bg-dark rounded-2xl p-8 md:p-12 text-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-8 md:mb-0 md:mr-8">
+                        <h3 class="text-2xl font-bold mb-3"><i class="fas fa-hard-hat text-accent mr-3"></i>Multiservices & Astreinte Pro</h3>
+                        <p class="text-gray-300 max-w-2xl">
+                            Besoin d'un homme à tout faire expert ? Petite maçonnerie, électricité, serrurerie... Je gère !
+                            <br><span class="text-accent">Syndics & Bailleurs :</span> Découvrez nos contrats d'astreinte prioritaires.
+                        </p>
+                    </div>
+                    <a href="contact.html" class="whitespace-nowrap bg-white text-dark px-6 py-3 rounded-lg font-bold hover:bg-accent hover:text-white transition-all">
+                        Demander un contrat Pro
+                    </a>
                 </div>
             </div>
-            <div>
-                <h4 class="text-xl font-semibold mb-4">Services</h4>
-                <ul class="space-y-2">
-                    <li><a href="plomberie.html" class="hover:text-accent transition">Plomberie Générale</a></li>
-                    <li><a href="chauffage.html" class="hover:text-accent transition">Chauffage & Pompes à Chaleur</a></li>
-                    <li><a href="climatisation.html" class="hover:text-accent transition">Climatisation</a></li>
-                    <li><a href="#" class="hover:text-accent transition text-gray-400">Contrats d'entretien (Bientôt)</a></li>
-                </ul>
+        </div>
+    </section>
+
+    <section id="boutique" class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block p-3 rounded-full bg-accent/10 text-accent mb-4">
+                <i class="fas fa-rocket text-2xl"></i>
             </div>
-            <div>
-                <h4 class="text-xl font-semibold mb-4">Zone d'Intervention</h4>
-                <p class="text-sm leading-relaxed">
-                    Montpellier Centre et Métropole, Lattes, Pérols, Palavas-les-Flots, Castelnau-le-Lez, Saint-Jean-de-Védas, Mauguio, et communes dans un rayon de 25km.
-                </p>
-            </div>
-            <div>
-                <h4 class="text-xl font-semibold mb-4">Contact</h4>
-                <ul class="space-y-2">
-                    <li><i class="fas fa-phone-alt mr-2 text-accent"></i> <a href="tel:+33600000000" class="hover:text-accent">06 00 00 00 00</a></li>
-                    <li><i class="fas fa-envelope mr-2 text-accent"></i> <a href="mailto:contact@multitech34.fr" class="hover:text-accent">contact@multitech34.fr</a></li>
-                    <li class="text-sm mt-4"><i class="fas fa-clock mr-2 text-accent"></i> Lun-Ven: 8h-18h <br> Astreinte 24/7 (sur contrat)</li>
-                </ul>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Bientôt : La Boutique Multitech34</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-10">
+                Commandez directement vos <strong>Kits d'entretien professionnels</strong> (Clim/PAC) avec mes guides vidéos exclusifs, et souscrivez à vos <strong>contrats de maintenance</strong> en ligne.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto opacity-75">
+                <div class="border border-dashed border-gray-300 rounded-xl p-6 flex items-center">
+                    <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center mr-4">
+                        <i class="fas fa-box-open text-gray-400 text-2xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="font-bold">Kit Entretien Clim Pro</h4>
+                        <p class="text-sm text-gray-500">Spray nettoyant + Peigne + Vidéo Tuto</p>
+                    </div>
+                </div>
+                <div class="border border-dashed border-gray-300 rounded-xl p-6 flex items-center">
+                    <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center mr-4">
+                        <i class="fas fa-file-contract text-gray-400 text-2xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="font-bold">Contrat Sérénité Annuel</h4>
+                        <p class="text-sm text-gray-500">Maintenance préventive prioritaire</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="container mx-auto px-4 mt-8 pt-8 border-t border-blue-800 text-center">
-            <p class="mb-3">&copy; 2024 Multitech34. Excellence artisanale.</p>
-            <p class="text-sm text-blue-200 italic font-medium">
-                "Créé avec IAmour pour <span class="text-red-500 mx-1">❤️</span> Lucille <span class="text-red-500 mx-1">❤️</span> Grâce à Dieu, pour sa gloire."
-            </p>
+    </section>
+
+    <footer class="bg-primary-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Multitech34</h3>
+                    <p class="text-green-100 text-sm mb-6 leading-relaxed">
+                        L'excellence artisanale à votre service. Intervention rapide, travail soigné et tarifs justes.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-green-100">
+                        <li><a href="index.html" class="hover:text-white hover:underline">Accueil</a></li>
+                        <li><a href="plomberie.html" class="hover:text-white hover:underline">Plomberie & Urgences</a></li>
+                        <li><a href="chauffage.html" class="hover:text-white hover:underline">Chauffage & RGE</a></li>
+                        <li><a href="climatisation.html" class="hover:text-white hover:underline">Climatisation</a></li>
+                        <li><a href="contact.html" class="hover:text-white hover:underline">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Zone d'Intervention</h4>
+                    <p class="text-sm text-green-100 leading-relaxed mb-2">
+                        <strong>Rayon de 25km autour de Lattes :</strong>
+                    </p>
+                    <ul class="text-sm text-green-100 space-y-1">
+                        <li><i class="fas fa-map-pin text-accent mr-2"></i> Montpellier Centre & Métropole</li>
+                        <li><i class="fas fa-map-pin text-accent mr-2"></i> Lattes / Pérols / Mauguio</li>
+                        <li><i class="fas fa-map-pin text-accent mr-2"></i> Castelnau / Le Crès</li>
+                        <li><i class="fas fa-map-pin text-accent mr-2"></i> Palavas / Carnon</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Coordonnées</h4>
+                    <ul class="space-y-3 text-sm text-green-100">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-3 text-accent"></i>
+                            <a href="tel:0649955298" class="font-bold hover:text-white">06 49 95 52 98</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-accent"></i>
+                            <a href="mailto:babferrer@icloud.com" class="hover:text-white">babferrer@icloud.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-3 text-accent"></i>
+                            <span>Lun - Sam : 8h - 19h<br>Dimanche : Urgences uniquement</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-green-800 pt-8 text-center">
+                <p class="text-sm text-green-200 mb-2">
+                    &copy; 2025 Multitech34. Tous droits réservés. Mentions Légales.
+                </p>
+                <p class="text-sm font-medium italic text-green-100 opacity-90">
+                    "Créé avec IAmour pour <span class="text-red-500 animate-pulse">❤️</span> Lucille <span class="text-red-500 animate-pulse">❤️</span> Grâce à Dieu, pour sa gloire."
+                </p>
+            </div>
         </div>
     </footer>
-    <div id="chatbot-container" class="fixed bottom-4 right-4 z-50">
-        <button id="chatbot-toggle" class="bg-secondary hover:bg-secondary-dark text-white rounded-full p-4 shadow-lg transition transform hover:scale-110">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-            </svg>
-        </button>
-        <div id="chatbot-window" class="hidden absolute bottom-16 right-0 bg-white rounded-lg shadow-xl w-80 sm:w-96 overflow-hidden transition-all duration-300 ease-in-out transform origin-bottom-right scale-95 opacity-0">
-            <div class="bg-primary text-white p-4 flex justify-between items-center">
-                <h3 class="font-semibold">Madison AI - Multitech34</h3>
-                <button id="chatbot-close" class="text-white hover:text-gray-200 transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <div id="chat-messages" class="p-4 h-80 overflow-y-auto bg-gray-50">
-                </div>
-            <div class="p-4 bg-white border-t border-gray-200">
-                <form id="chat-form" class="flex space-x-2">
-                    <input type="text" id="chat-input" placeholder="Posez votre question..." class="flex-grow px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-secondary">
-                    <button type="submit" class="bg-secondary hover:bg-secondary-dark text-white rounded-full p-2 transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-secondary">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                        </svg>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
 
+    <div id="madison-widget-container">
+        </div>
+
+    <script>
+        // Menu Mobile Toggle
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Navbar Transition au scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-0');
+            } else {
+                navbar.classList.remove('py-0');
+            }
+        });
+    </script>
+    
     <script src="multitech34.js"></script>
+
 </body>
 </html>
