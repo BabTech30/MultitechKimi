@@ -15,7 +15,9 @@
     <meta property="og:description" content="Intervention rapide 24/7. Bastien, votre artisan certifié RGE pour tous travaux de plomberie, chauffage et multiservices.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://multitech34.fr">
-    <meta property="og:image" content="https://multitech34.fr/images/og-image.jpg"> <script src="https://cdn.tailwindcss.com"></script>
+    <meta property="og:image" content="https://multitech34.fr/images/og-image.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -87,99 +89,77 @@
     </script>
 
     <style>
-        /* --- CSS MADISON AI --- */
-.madison-widget {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-}
-
-.madison-button {
-    background: linear-gradient(135deg, #1a5f4a, #16a085);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    color: white;
-    font-size: 24px;
-    border: none;
-    box-shadow: 0 4px 15px rgba(26, 95, 74, 0.4);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.madison-button:hover {
-    transform: scale(1.1);
-}
-
-.madison-chat {
-    position: absolute;
-    bottom: 80px;
-    right: 0;
-    width: 350px;
-    height: 500px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-    transform: scale(0); /* Caché par défaut */
-    transform-origin: bottom right;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-/* La classe .active est ajoutée par le JS pour afficher le chat */
-.madison-chat.active {
-    transform: scale(1);
-}
-
-/* Messages */
-.message { margin-bottom: 10px; display: flex; }
-.message.user { justify-content: flex-end; }
-.message.madison { justify-content: flex-start; }
-
-.message-bubble {
-    max-width: 80%;
-    padding: 10px 15px;
-    border-radius: 15px;
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-.message-bubble.user {
-    background: #1a5f4a;
-    color: white;
-    border-bottom-right-radius: 2px;
-}
-
-.message-bubble.madison {
-    background: #f1f5f9;
-    color: #334155;
-    border-bottom-left-radius: 2px;
-}
-
-/* Mobile responsive */
-@media (max-width: 480px) {
-    .madison-chat {
-        width: 300px;
-        height: 450px;
-        bottom: 70px;
-        right: -10px; /* Ajustement mobile */
-    }
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        /* Animation d'apparition douce */
+        
+        /* Animations */
         .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
         @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
         
-        /* Effet de verre pour le menu mobile */
         .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
         
-        /* Correction hauteur mobile */
-        .min-h-screen-mobile { min-height: 100vh; min-height: 100dvh; }
+        /* --- STYLE MADISON AI --- */
+        .madison-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        .madison-button {
+            background: linear-gradient(135deg, #1a5f4a, #16a085);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            color: white;
+            font-size: 24px;
+            border: none;
+            box-shadow: 0 4px 15px rgba(26, 95, 74, 0.4);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .madison-button:hover { transform: scale(1.1); }
+
+        .madison-chat {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            transform: scale(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .madison-chat.active { transform: scale(1); }
+
+        .message { margin-bottom: 10px; display: flex; }
+        .message.user { justify-content: flex-end; }
+        .message.madison { justify-content: flex-start; }
+
+        .message-bubble {
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 15px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .message-bubble.user { background: #1a5f4a; color: white; border-bottom-right-radius: 2px; }
+        .message-bubble.madison { background: #f1f5f9; color: #334155; border-bottom-left-radius: 2px; }
+        
+        @media (max-width: 480px) {
+            .madison-chat { width: 300px; height: 450px; bottom: 70px; right: -10px; }
+        }
     </style>
 </head>
 
@@ -558,8 +538,51 @@
         </div>
     </footer>
 
-    <div id="madison-widget-container">
+    <div class="madison-widget">
+        <button onclick="toggleMadison()" class="madison-button" aria-label="Discuter avec Madison">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+
+        <div id="madisonChat" class="madison-chat">
+            <div class="bg-primary text-white p-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-xl">🤖</div>
+                    <div>
+                        <h3 class="font-bold text-sm">Madison</h3>
+                        <div class="flex items-center gap-1 text-xs text-green-200">
+                            <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span> En ligne 24/7
+                        </div>
+                    </div>
+                </div>
+                <button onclick="toggleMadison()" class="text-white hover:text-gray-200">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div id="madisonMessages" class="flex-1 p-4 overflow-y-auto bg-gray-50">
+                </div>
+
+            <div class="p-3 bg-white border-t border-gray-100 flex flex-wrap gap-2 justify-center">
+                <button onclick="selectQuickReply(this)" class="text-xs bg-gray-100 hover:bg-primary hover:text-white px-3 py-1 rounded-full transition">Devis gratuit</button>
+                <button onclick="selectQuickReply(this)" class="text-xs bg-gray-100 hover:bg-red-500 hover:text-white px-3 py-1 rounded-full transition">Urgence 24/7</button>
+                <button onclick="selectQuickReply(this)" class="text-xs bg-gray-100 hover:bg-primary hover:text-white px-3 py-1 rounded-full transition">Prix installation</button>
+            </div>
+
+            <div id="typingIndicator" class="hidden px-4 py-2 text-xs text-gray-500 bg-gray-50 italic">
+                Madison écrit...
+            </div>
+
+            <div class="p-4 bg-white border-t border-gray-200 flex gap-2">
+                <input type="text" id="madisonInput" 
+                    placeholder="Posez votre question..." 
+                    onkeypress="handleKeyPress(event)"
+                    class="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-primary">
+                <button onclick="sendMessage()" class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary-dark transition">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
         </div>
+    </div>
 
     <script>
         // Menu Mobile Toggle
