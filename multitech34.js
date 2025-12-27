@@ -96,7 +96,7 @@ function initMadisonAI() {
 
 // Configuration Madison
 const CONFIG = {
-    bossName: "Bastien",
+    bossName: "Mr Ferrer",
     phone: "06 49 95 52 98",
     typingSpeed: 30
 };
