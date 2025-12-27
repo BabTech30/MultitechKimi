@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="fr" itemscope itemtype="https://schema.org/ProfessionalService">
+<html lang="fr" itemscope itemtype="https://schema.org/HVACBusiness">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climatisation - Multitech34 | Bastien | Installation Climatisation Lattes Montpellier</title>
-    <meta name="description" content="Installation de climatisation réversible à Lattes (34970) et Montpellier (34000). Expert en climatisation, devis gratuit, installation professionnelle.">
-    <meta name="keywords" content="climatisation Lattes, climatisation Montpellier, installation clim reversible, climatiseur Montpellier, expert climatisation">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- Tailwind CSS -->
+    <title>Climatisation Montpellier : Installation, Entretien Bactéricide & Dépannage | Multitech34</title>
+    
+    <meta name="description" content="Expert climatisation à Lattes et Montpellier. Installation gainable Zone Control, entretien anti-bactérien certifié et dépannage rapide. Respirez un air sain avec Bastien.">
+    
+    <meta name="keywords" content="nettoyage climatisation vapeur, désinfection légionellose clim, installation gainable zone control, recharge gaz R32 montpellier, dépannage fuite eau clim, climatisation silencieuse chambre">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -17,436 +20,335 @@
                         'primary': '#1a5f4a',
                         'secondary': '#16a085',
                         'accent': '#f39c12',
+                        'accent-hover': '#d35400',
                         'dark': '#2c3e50'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Entretien Climatisation",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Multitech34"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Montpellier"
+      },
+      "description": "Nettoyage complet, désinfection bactéricide et fongicide, vérification étanchéité.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services Climatisation",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Installation Gainable Zone Control"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Entretien Annuel Hygiène+"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        /* Styles Madison */
+        .madison-widget { position: fixed; bottom: 20px; right: 20px; z-index: 9999; }
+        .madison-button { background: linear-gradient(135deg, #1a5f4a, #16a085); width: 60px; height: 60px; border-radius: 50%; color: white; font-size: 24px; border: none; box-shadow: 0 4px 15px rgba(26, 95, 74, 0.4); cursor: pointer; transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; }
+        .madison-button:hover { transform: scale(1.1); }
+        .madison-chat { position: absolute; bottom: 80px; right: 0; width: 350px; height: 500px; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); transform: scale(0); transform-origin: bottom right; transition: transform 0.3s; display: flex; flex-direction: column; overflow: hidden; }
+        .madison-chat.active { transform: scale(1); }
+        .message-bubble { max-width: 80%; padding: 10px 15px; border-radius: 15px; font-size: 14px; }
+        .message-bubble.user { background: #1a5f4a; color: white; border-bottom-right-radius: 2px; align-self: flex-end; }
+        .message-bubble.madison { background: #f1f5f9; color: #334155; border-bottom-left-radius: 2px; align-self: flex-start; }
     </style>
 </head>
 
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+            <div class="flex justify-between items-center h-20">
                 <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <h1 class="text-2xl font-bold text-primary">Multitech34</h1>
-                        <p class="text-sm text-gray-600">Bastien - Expert Climatisation</p>
+                    <a href="index.html" class="flex flex-col">
+                        <span class="text-2xl font-bold text-primary tracking-tight">Multitech34</span>
+                        <span class="text-xs text-gray-500 font-medium">Bastien - Artisan Expert</span>
+                    </a>
+                    <div class="hidden lg:flex ml-6 space-x-2">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 border border-green-200"><i class="fas fa-leaf mr-1"></i> RGE Certifié</span>
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 border border-blue-200"><i class="fas fa-certificate mr-1"></i> ADC Fluides</span>
                     </div>
                 </div>
                 
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium transition">Accueil</a>
+                    <a href="plomberie.html" class="text-gray-600 hover:text-primary font-medium transition">Plomberie</a>
+                    <a href="chauffage.html" class="text-gray-600 hover:text-primary font-medium transition">Chauffage</a>
+                    <a href="climatisation.html" class="text-primary font-bold border-b-2 border-primary pb-1">Climatisation</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary font-medium transition">Contact</a>
+                </div>
+
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="index.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Accueil</a>
-                        <a href="plomberie.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Plomberie</a>
-                        <a href="chauffage.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Chauffage</a>
-                        <a href="climatisation.html" class="text-primary px-3 py-2 rounded-md text-sm font-medium border-b-2 border-primary">Climatisation</a>
-                        <a href="lattes.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Lattes</a>
-                        <a href="montpellier.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Montpellier</a>
-                        <a href="contact.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
-                    </div>
+                    <a href="tel:0649955298" class="inline-flex items-center px-5 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-accent hover:bg-accent-hover shadow-md transition-all transform hover:scale-105">
+                        <i class="fas fa-phone-alt mr-2"></i> 06 49 95 52 98
+                    </a>
                 </div>
                 
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-900 hover:text-primary focus:outline-none">
-                        <i class="fas fa-bars text-xl"></i>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
         
-        <div id="mobile-menu" class="md:hidden hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-                <a href="index.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
-                <a href="plomberie.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Plomberie</a>
-                <a href="chauffage.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Chauffage</a>
-                <a href="climatisation.html" class="text-primary block px-3 py-2 rounded-md text-base font-medium border-l-4 border-primary pl-4">Climatisation</a>
-                <a href="lattes.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Lattes</a>
-                <a href="montpellier.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Montpellier</a>
-                <a href="contact.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        <div id="mobile-menu" class="md:hidden hidden glass-effect border-t">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Accueil</a>
+                <a href="plomberie.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Plomberie</a>
+                <a href="chauffage.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Chauffage</a>
+                <a href="climatisation.html" class="block px-3 py-3 rounded-md text-base font-bold text-primary bg-green-50">Climatisation</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-blue-600 to-cyan-600 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="inline-flex items-center px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm font-medium mb-6">
-                    <i class="fas fa-snowflake mr-2"></i>
-                    Service Climatisation
-                </div>
-                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                    Climatisation Réversible
-                    <span class="block text-2xl lg:text-3xl font-normal text-blue-200 mt-2">
-                        Fraîcheur l'été, Chaleur l'hiver
-                    </span>
+    <section class="relative pt-32 pb-24 overflow-hidden bg-cyan-900">
+        <div class="absolute inset-0 z-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1617757982885-2e6584281313?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-950 via-cyan-900/80 to-transparent z-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-white">
+            <div class="md:w-2/3">
+                <span class="text-cyan-300 font-bold tracking-wider uppercase mb-2 block">Air Pur & Température Idéale</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                    Climatisation Réversible &<br> <span class="text-accent">Qualité d'Air Intérieur.</span>
                 </h1>
-                <p class="text-xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
-                    Installation de climatisation réversible à <strong>Lattes (34970)</strong> et 
-                    <strong>Montpellier (34000)</strong>. Solutions adaptées à vos besoins pour un confort 
-                    optimal toute l'année avec une efficacité énergétique maximale.
+                <p class="text-xl text-gray-200 mb-8 max-w-2xl">
+                    Ne respirez plus les bactéries. Bastien installe et désinfecte vos climatiseurs (Splits & Gainables) pour un confort sain toute l'année à Montpellier.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="tel:0649955298" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 text-lg font-semibold rounded-lg hover:bg-gray-100 transition-colors">
-                        <i class="fas fa-phone mr-3"></i>
-                        06 49 95 52 98
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#expertises" class="bg-accent hover:bg-accent-hover text-white px-8 py-3 rounded-lg font-bold text-center transition">
+                        Voir les solutions
                     </a>
-                    <a href="contact.html" class="inline-flex items-center px-8 py-4 border-2 border-white text-white text-lg font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
-                        <i class="fas fa-envelope mr-3"></i>
-                        Devis Gratuit
+                    <a href="#entretien" class="bg-white/10 backdrop-blur border border-white/30 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold text-center transition">
+                        Mon Pack Hygiène+
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Avantages Climatisation Réversible -->
-    <section class="py-20 bg-white">
+    <section id="expertises" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                    Pourquoi choisir la <span class="text-primary">climatisation réversible</span> ?
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Un seul équipement pour le confort été comme hiver. Économique et écologique, 
-                    la climatisation réversible est la solution idéale pour votre habitat.
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Au-delà du simple froid : La Technicité</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Le marché évolue. Voici les solutions techniques avancées que je propose pour répondre à vos exigences de confort et d'esthétisme.
                 </p>
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-3xl mx-auto mb-6">
-                        <i class="fas fa-thermometer-half"></i>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="flex flex-col md:flex-row gap-6 items-start p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 shrink-0 bg-cyan-50 rounded-full flex items-center justify-center text-3xl text-cyan-600">
+                        <i class="fas fa-wind"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Confort Total</h3>
-                    <p class="text-gray-600">Fraîcheur en été et chaleur en hiver avec un seul système.</p>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Gainable & Zone Control</h3>
+                        <p class="text-sm text-cyan-700 font-semibold mb-3 uppercase tracking-wide">Le Luxe Invisible</p>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            Fini les blocs disgracieux aux murs. Tout est caché dans les combles. Avec le système <strong>Zone Control</strong>, vous réglez la température de chaque chambre au degré près. Idéal pour les familles (bébé dort à 20°C, salon à 22°C).
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li><i class="fas fa-check text-accent mr-2"></i> Grilles design discrètes</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i> Pilotage smartphone</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i> Silence absolu</li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-3xl mx-auto mb-6">
-                        <i class="fas fa-leaf"></i>
+
+                <div class="flex flex-col md:flex-row gap-6 items-start p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 shrink-0 bg-green-50 rounded-full flex items-center justify-center text-3xl text-green-600">
+                        <i class="fas fa-pump-medical"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Économies d'énergie</h3>
-                    <p class="text-gray-600">Jusqu'à 70% d'économies par rapport au chauffage électrique classique.</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-3xl mx-auto mb-6">
-                        <i class="fas fa-cogs"></i>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Santé & Qualité de l'Air</h3>
+                        <p class="text-sm text-green-700 font-semibold mb-3 uppercase tracking-wide">Stop aux mauvaises odeurs</p>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            Une clim qui sent mauvais est une clim contaminée (moisissures, bactéries). Je ne passe pas juste un coup de chiffon. J'utilise des produits professionnels <strong>bactéricides et fongicides</strong> (norme EN1040/1275) pour assainir l'évaporateur.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li><i class="fas fa-check text-accent mr-2"></i> Élimination allergènes</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i> Nettoyage bac à condensats</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i> Air sain garanti</li>
+                        </ul>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Facilité d'installation</h3>
-                    <p class="text-gray-600">Installation rapide sans gros travaux dans la plupart des cas.</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center text-red-600 text-3xl mx-auto mb-6">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Qualité de l'air</h3>
-                    <p class="text-gray-600">Filtration de l'air pour un environnement plus sain.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Types d'Installation -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-16 bg-gray-50 border-y border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                    Types d'<span class="text-primary">Installation</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Différentes solutions adaptées à vos besoins et à la configuration de votre habitat.
-                </p>
+            <h3 class="text-2xl font-bold text-center mb-10 text-dark">Dépannage : Votre climatisation a ces symptômes ?</h3>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <i class="fas fa-tint text-4xl text-blue-400 mb-4"></i>
+                    <h4 class="font-bold mb-2">Fuite d'eau (Split)</h4>
+                    <p class="text-xs text-gray-500">L'eau coule le long du mur ? Évacuation bouchée.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <i class="fas fa-icicles text-4xl text-cyan-400 mb-4"></i>
+                    <h4 class="font-bold mb-2">Givre sur l'unité</h4>
+                    <p class="text-xs text-gray-500">Manque de gaz ou filtres encrassés.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <i class="fas fa-poop text-4xl text-yellow-600 mb-4"></i>
+                    <h4 class="font-bold mb-2">Mauvaise odeur</h4>
+                    <p class="text-xs text-gray-500">Prolifération bactérienne dans l'échangeur.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <i class="fas fa-volume-up text-4xl text-red-400 mb-4"></i>
+                    <h4 class="font-bold mb-2">Bruit anormal</h4>
+                    <p class="text-xs text-gray-500">Problème ventilateur ou silent-blocs usés.</p>
+                </div>
             </div>
+            <div class="text-center mt-10">
+                <a href="tel:0649955298" class="inline-flex items-center text-accent font-bold hover:underline text-lg">
+                    <i class="fas fa-phone-alt mr-2"></i> Diagnostic téléphonique immédiat avec Bastien
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="entretien" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12">Tarifs Entretien & Installation</h2>
             
-            <div class="grid lg:grid-cols-3 gap-8">
-                <!-- Monosplit -->
-                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                    <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
-                            <i class="fas fa-home"></i>
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <div class="border rounded-xl p-6 hover:shadow-lg transition bg-white">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Entretien Mono-Split</h3>
+                    <p class="text-sm text-gray-500 mb-4">Nettoyage complet unité int + ext</p>
+                    <div class="text-3xl font-bold text-primary mb-6">89€ <span class="text-sm font-normal text-gray-500">TTC</span></div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-sm"><i class="fas fa-check text-green-500 mr-2"></i> Nettoyage filtres</li>
+                        <li class="flex items-center text-sm"><i class="fas fa-check text-green-500 mr-2"></i> Dépoussiérage échangeur</li>
+                        <li class="flex items-center text-sm"><i class="fas fa-check text-green-500 mr-2"></i> Contrôle températures</li>
+                    </ul>
+                    <a href="contact.html" class="block w-full py-2 bg-gray-100 text-gray-800 font-bold text-center rounded hover:bg-gray-200">Choisir</a>
+                </div>
+
+                <div class="border-2 border-primary rounded-xl p-6 shadow-md relative overflow-hidden bg-white">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl">Best-Seller</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Forfait Hygiène+</h3>
+                    <p class="text-sm text-gray-500 mb-4">Désinfection Pro & Recherche fuite</p>
+                    <div class="text-3xl font-bold text-primary mb-6">139€ <span class="text-sm font-normal text-gray-500">TTC</span></div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-sm font-bold text-gray-800"><i class="fas fa-check text-accent mr-2"></i> Traitement Bactéricide</li>
+                        <li class="flex items-center text-sm font-bold text-gray-800"><i class="fas fa-check text-accent mr-2"></i> Traitement Fongicide</li>
+                        <li class="flex items-center text-sm"><i class="fas fa-check text-green-500 mr-2"></i> Contrôle étanchéité gaz</li>
+                    </ul>
+                    <a href="contact.html" class="block w-full py-2 bg-primary text-white font-bold text-center rounded hover:bg-primary-dark">Prendre RDV</a>
+                </div>
+
+                <div class="border border-dashed border-gray-400 rounded-xl p-6 bg-gray-50 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Kit Entretien "Do It Yourself"</h3>
+                        <p class="text-sm text-gray-500 mb-4">Faites-le vous-même comme un pro</p>
+                        <div class="flex justify-center my-4">
+                            <i class="fas fa-box-open text-6xl text-gray-300"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Monosplit</h3>
-                        <p class="text-primary font-medium">1 pièce</p>
+                        <p class="text-sm text-gray-600 mb-4">
+                            Bientôt disponible : Mon spray nettoyant professionnel + peigne à ailettes + ma vidéo tuto privée.
+                        </p>
                     </div>
-                    <p class="text-gray-600 mb-6 text-center">
-                        Solution idéale pour climatiser une seule pièce. Installation simple et économique.
-                    </p>
-                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Pour pièce jusqu'à 35m²
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Installation rapide
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Solution économique
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Idéal appartement
-                        </li>
-                    </ul>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-primary mb-2">À partir de</div>
-                        <div class="text-4xl font-bold text-gray-900 mb-4">1 200€</div>
-                        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-secondary transition-colors">
-                            <i class="fas fa-calculator mr-2"></i>
-                            Devis gratuit
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Multisplit -->
-                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                    <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Multisplit</h3>
-                        <p class="text-primary font-medium">Plusieurs pièces</p>
-                    </div>
-                    <p class="text-gray-600 mb-6 text-center">
-                        Climatisez plusieurs pièces avec une seule unité extérieure. Solution discrète et efficace.
-                    </p>
-                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Jusqu'à 5 unités intérieures
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            1 seule unité extérieure
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Contrôle indépendant
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Idéal maison
-                        </li>
-                    </ul>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-primary mb-2">À partir de</div>
-                        <div class="text-4xl font-bold text-gray-900 mb-4">2 500€</div>
-                        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-secondary transition-colors">
-                            <i class="fas fa-calculator mr-2"></i>
-                            Devis gratuit
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Gainable -->
-                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                    <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
-                            <i class="fas fa-wind"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Gainable</h3>
-                        <p class="text-primary font-medium">Toute la maison</p>
-                    </div>
-                    <p class="text-gray-600 mb-6 text-center">
-                        Solution la plus discrète et performante. Distribution d'air par gaines dans toutes les pièces.
-                    </p>
-                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Climatisation complète
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Installation discrète
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Distribution homogène
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Idéal rénovation
-                        </li>
-                    </ul>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-primary mb-2">À partir de</div>
-                        <div class="text-4xl font-bold text-gray-900 mb-4">4 500€</div>
-                        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-secondary transition-colors">
-                            <i class="fas fa-calculator mr-2"></i>
-                            Devis gratuit
-                        </a>
-                    </div>
+                    <button disabled class="block w-full py-2 bg-gray-200 text-gray-500 font-bold text-center rounded cursor-not-allowed">Bientôt disponible</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Marques -->
-    <section class="py-20 bg-white">
+    <footer class="bg-primary-dark text-white pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                    Marques <span class="text-primary">Partenaires</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Je travaille avec les plus grandes marques pour garantir qualité et fiabilité.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
-                <div class="bg-gray-50 rounded-xl p-6 text-center">
-                    <div class="text-2xl font-bold text-primary">Daikin</div>
-                    <div class="text-sm text-gray-600">Japonais</div>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-6 text-center">
-                    <div class="text-2xl font-bold text-primary">Mitsubishi</div>
-                    <div class="text-sm text-gray-600">Electric</div>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-6 text-center">
-                    <div class="text-2xl font-bold text-primary">Toshiba</div>
-                    <div class="text-sm text-gray-600">Japonais</div>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-6 text-center">
-                    <div class="text-2xl font-bold text-primary">LG</div>
-                    <div class="text-sm text-gray-600">Coréen</div>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-6 text-center">
-                    <div class="text-2xl font-bold text-primary">Samsung</div>
-                    <div class="text-sm text-gray-600">Coréen</div>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-6 text-center">
-                    <div class="text-2xl font-bold text-primary">Fujitsu</div>
-                    <div class="text-sm text-gray-600">Japonais</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Processus Installation -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                    Processus <span class="text-primary">d'Installation</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Une méthodologie rigoureuse pour une installation parfaite et durable.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-6">1</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Étude</h3>
-                    <p class="text-gray-600">Analyse de vos besoins et calcul de puissance pour dimensionner correctement l'installation.</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-6">2</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Devis</h3>
-                    <p class="text-gray-600">Proposition détaillée avec plusieurs options adaptées à votre budget et vos contraintes.</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-6">3</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Installation</h3>
-                    <p class="text-gray-600">Pose professionnelle par un artisan qualifié, respectant les normes en vigueur.</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-6">4</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">SAV</h3>
-                    <p class="text-gray-600">Formation à l'utilisation et maintenance. Service après-vente réactif.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Multitech34</h3>
-                    <p class="text-gray-400 mb-4">
-                        Expert en plomberie, chauffage et climatisation. 
-                        Intervention rapide et professionnelle.
-                    </p>
-                    <p class="text-sm text-gray-500">
-                        18 plan de New York<br>
-                        34970 Lattes
-                    </p>
+                    <h3 class="text-2xl font-bold mb-4">Multitech34</h3>
+                    <p class="text-green-100 text-sm mb-6">Spécialiste du confort thermique et de la qualité de l'air à Montpellier.</p>
                 </div>
-                
                 <div>
-                    <h4 class="font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="plomberie.html" class="hover:text-white transition-colors">Plomberie</a></li>
-                        <li><a href="chauffage.html" class="hover:text-white transition-colors">Chauffage</a></li>
-                        <li><a href="climatisation.html" class="hover:text-white transition-colors">Climatisation</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Devis gratuit</a></li>
+                    <h4 class="font-bold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm text-green-100">
+                        <li><a href="plomberie.html" class="hover:text-white">Plomberie</a></li>
+                        <li><a href="chauffage.html" class="hover:text-white">Chauffage</a></li>
+                        <li><a href="climatisation.html" class="hover:text-white font-bold text-white">Climatisation</a></li>
                     </ul>
                 </div>
-                
                 <div>
-                    <h4 class="font-semibold mb-4">Zones</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="lattes.html" class="hover:text-white transition-colors">Lattes (34970)</a></li>
-                        <li><a href="montpellier.html" class="hover:text-white transition-colors">Montpellier (34000)</a></li>
-                        <li><a href="montpellier.html" class="hover:text-white transition-colors">Castelnau-le-Lez (34170)</a></li>
+                    <h4 class="font-bold text-lg mb-4">Zone</h4>
+                    <ul class="text-sm text-green-100 space-y-1">
+                        <li>Montpellier</li>
+                        <li>Lattes / Pérols</li>
+                        <li>Et 25km alentours</li>
                     </ul>
                 </div>
-                
                 <div>
-                    <h4 class="font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>
-                            <a href="tel:0649955298" class="hover:text-white transition-colors">
-                                <i class="fas fa-phone mr-2"></i>
-                                06 49 95 52 98
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:babferrer@icloud.com" class="hover:text-white transition-colors">
-                                <i class="fas fa-envelope mr-2"></i>
-                                babferrer@icloud.com
-                            </a>
-                        </li>
-                    </ul>
+                    <h4 class="font-bold text-lg mb-4">Contact</h4>
+                    <p class="text-sm text-green-100"><a href="tel:0649955298">06 49 95 52 98</a></p>
+                    <p class="text-sm text-green-100"><a href="mailto:babferrer@icloud.com">babferrer@icloud.com</a></p>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400 text-sm">
-                    © 2025 Multitech34 - Bastien. Tous droits réservés. 
-                    <span class="text-red-400">❤️ Pour Lucille ❤️</span>
+            <div class="border-t border-green-800 pt-8 text-center">
+                <p class="text-sm text-green-200 mb-2">&copy; 2025 Multitech34. Tous droits réservés.</p>
+                <p class="text-sm font-medium italic text-green-100 opacity-90">
+                    "Créé avec IAmour pour <span class="text-red-500 animate-pulse">❤️</span> Lucille <span class="text-red-500 animate-pulse">❤️</span> Grâce à Dieu, pour sa gloire."
                 </p>
             </div>
         </div>
     </footer>
 
+    <div class="madison-widget">
+        <button onclick="toggleMadison()" class="madison-button"><i class="fas fa-comment-dots"></i></button>
+        <div id="madisonChat" class="madison-chat">
+            <div class="bg-primary text-white p-4 flex justify-between items-center">
+                <span class="font-bold">Madison AI</span>
+                <button onclick="toggleMadison()"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="madisonMessages" class="flex-1 p-4 overflow-y-auto bg-gray-50"></div>
+            <div class="p-4 bg-white border-t flex gap-2">
+                <input type="text" id="madisonInput" placeholder="Question..." class="flex-1 border rounded-full px-4 py-2 text-sm focus:outline-none">
+                <button onclick="sendMessage()" class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="multitech34.js"></script>
     <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) {
+            btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+        }
     </script>
 </body>
 </html>
