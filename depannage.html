@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr" itemscope itemtype="https://schema.org/GeneralContractor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Dépannage Multiservices & Astreinte Pro Montpellier | Électricité & Serrurerie | Multitech34</title>
+    
+    <meta name="description" content="Un seul artisan pour tout gérer : Électricité, Serrurerie, Petite maçonnerie. Service d'astreinte dédié aux Syndics et Bailleurs sur Montpellier et Lattes.">
+    
+    <meta name="keywords" content="homme à tout faire montpellier, artisan multiservices lattes, contrat maintenance syndic, serrurier urgence lattes, dépannage électrique rapide, petite maçonnerie hérault">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1a5f4a',    /* Vert/Teal Professionnel */
+                        'primary-dark': '#144a39',
+                        'secondary': '#16a085',  /* Vert d'eau */
+                        'accent': '#f39c12',     /* Orange Urgence/Action */
+                        'accent-hover': '#d35400',
+                        'dark': '#2c3e50'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        
+        /* Widget Madison */
+        .madison-widget { position: fixed; bottom: 20px; right: 20px; z-index: 9999; }
+        .madison-button { background: linear-gradient(135deg, #1a5f4a, #16a085); width: 60px; height: 60px; border-radius: 50%; color: white; font-size: 24px; border: none; box-shadow: 0 4px 15px rgba(26, 95, 74, 0.4); cursor: pointer; transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; }
+        .madison-button:hover { transform: scale(1.1); }
+        .madison-chat { position: absolute; bottom: 80px; right: 0; width: 350px; height: 500px; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); transform: scale(0); transform-origin: bottom right; transition: transform 0.3s; display: flex; flex-direction: column; overflow: hidden; }
+        .madison-chat.active { transform: scale(1); }
+        .message-bubble { max-width: 80%; padding: 10px 15px; border-radius: 15px; font-size: 14px; }
+        
+        @media (max-width: 480px) {
+            .madison-chat { width: 300px; height: 450px; bottom: 70px; right: -10px; }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex flex-col">
+                        <span class="text-2xl font-bold text-primary tracking-tight">Multitech34</span>
+                        <span class="text-xs text-gray-500 font-medium">Bastien - Artisan Expert</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium transition">Accueil</a>
+                    
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-primary font-medium flex items-center">
+                            Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-xl py-2 hidden group-hover:block border border-gray-100">
+                            <a href="plomberie.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Plomberie</a>
+                            <a href="chauffage.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Chauffage & PAC</a>
+                            <a href="climatisation.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Climatisation</a>
+                        </div>
+                    </div>
+
+                    <a href="depannage.html" class="text-primary font-bold border-b-2 border-primary pb-1">Multiservices</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary font-medium transition">Contact</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="tel:0649955298" class="inline-flex items-center px-5 py-2.5 bg-accent hover:bg-accent-hover text-white font-bold rounded-lg transition-all shadow-md transform hover:scale-105 animate-pulse-slow">
+                        <i class="fas fa-phone-alt mr-2"></i> 06 49 95 52 98
+                    </a>
+                </div>
+                
+                <div class="md:hidden flex items-center">
+                    <a href="tel:0649955298" class="mr-4 text-accent font-bold text-lg animate-pulse"><i class="fas fa-phone"></i></a>
+                    <button id="mobile-menu-button" class="text-gray-700 p-2"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="md:hidden hidden glass-effect border-t px-4 py-4 space-y-2">
+            <a href="index.html" class="block py-2">Accueil</a>
+            <a href="plomberie.html" class="block py-2">Plomberie</a>
+            <a href="chauffage.html" class="block py-2">Chauffage</a>
+            <a href="climatisation.html" class="block py-2">Climatisation</a>
+            <a href="depannage.html" class="block py-2 font-bold text-primary">Multiservices</a>
+            <a href="contact.html" class="block py-2">Contact</a>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-24 bg-gray-800 overflow-hidden">
+        <div class="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2000')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-800/80 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-white">
+            <div class="md:w-2/3">
+                <span class="text-accent font-bold tracking-wider uppercase mb-2 block">Syndics, Bailleurs & Particuliers</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                    Dépannage Multitechnique<br>& <span class="text-secondary">Astreinte 24/7.</span>
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+                    Simplifiez-vous la vie avec un seul interlocuteur qualifié. Plomberie, électricité, serrurerie et petite maçonnerie. Expertise globale, facturation unique, sérénité totale.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:0649955298" class="bg-accent hover:bg-accent-hover text-white px-8 py-3 rounded-lg font-bold text-center">
+                        <i class="fas fa-phone-alt mr-2"></i>Appel Astreinte
+                    </a>
+                    <a href="#services" class="bg-white/10 backdrop-blur border border-white/30 text-white px-8 py-3 rounded-lg font-semibold text-center hover:bg-white/20 transition">
+                        Voir les Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">L'Artisan "Couteau Suisse" de l'Habitat</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Parce qu'une fuite d'eau abîme souvent le placo, et qu'une panne de chauffe-eau touche aussi l'électricité. Je gère l'ensemble pour vous éviter de multiplier les intervenants.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-2xl hover:bg-white hover:shadow-xl transition duration-300 group border border-gray-100">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center text-yellow-600 text-2xl mb-6 group-hover:bg-yellow-500 group-hover:text-white transition transform group-hover:scale-110 duration-300">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Électricité de base</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Remplacement de prises et interrupteurs, pose de luminaires, réparation chauffe-eau électrique, mise en sécurité tableau divisionnaire, recherche de panne simple.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl hover:bg-white hover:shadow-xl transition duration-300 group border border-gray-100">
+                    <div class="w-14 h-14 bg-gray-200 rounded-xl flex items-center justify-center text-gray-600 text-2xl mb-6 group-hover:bg-gray-600 group-hover:text-white transition transform group-hover:scale-110 duration-300">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Serrurerie d'Appoint</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Ouverture de porte claquée, remplacement de cylindre/barillet, réparation de poignée, réglage de porte qui frotte, sécurisation provisoire après effraction.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl hover:bg-white hover:shadow-xl transition duration-300 group border border-gray-100">
+                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center text-red-600 text-2xl mb-6 group-hover:bg-red-500 group-hover:text-white transition transform group-hover:scale-110 duration-300">
+                        <i class="fas fa-trowel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Petite Maçonnerie</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Rebouchage trous/saignées après recherche de fuite, reprise de carrelage, pose de faïence, joints silicone sanitaires, peinture de propreté après dégât des eaux.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-dark text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between relative z-10">
+            <div class="md:w-2/3 mb-8 md:mb-0">
+                <span class="bg-accent text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-wider mb-3 inline-block shadow-md">Offre B2B</span>
+                <h2 class="text-3xl font-bold mb-4">Syndics, Agences, Bailleurs : Déléguez vos soucis.</h2>
+                <p class="text-gray-300 text-lg mb-6">
+                    Je propose des <strong>contrats de maintenance et d'astreinte prioritaires</strong>. Vos locataires m'appellent, je gère l'urgence, je vous fais un rapport photo. Finis les appels paniqués le dimanche soir.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-3"></i> Intervention prioritaire 24/7 garantie</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-3"></i> Tarifs préférentiels négociés</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-3"></i> Rapport d'intervention numérique immédiat</li>
+                </ul>
+            </div>
+            <div class="md:w-1/3 text-center">
+                <a href="contact.html" class="inline-block bg-white text-dark hover:bg-accent hover:text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg transform hover:-translate-y-1">
+                    Demander un Contrat Pro
+                </a>
+                <p class="text-gray-400 text-xs mt-4">Devis gratuit sous 24h</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4">Multitech34</h3>
+                <p class="text-green-100 text-sm leading-relaxed">
+                    L'artisan polyvalent de confiance sur Montpellier. Une seule entreprise pour tous vos travaux techniques.
+                </p>
+                <div class="flex space-x-3 mt-4">
+                    <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition"><i class="fab fa-facebook-f text-sm"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition"><i class="fab fa-instagram text-sm"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Services</h4>
+                <ul class="text-green-100 text-sm space-y-2">
+                    <li><a href="plomberie.html" class="hover:text-white">Plomberie</a></li>
+                    <li><a href="chauffage.html" class="hover:text-white">Chauffage & RGE</a></li>
+                    <li><a href="climatisation.html" class="hover:text-white">Climatisation</a></li>
+                    <li><a href="depannage.html" class="font-bold text-white">Multiservices</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Zone d'Intervention</h4>
+                <p class="text-green-100 text-sm mb-2">Montpellier Métropole & Lattes</p>
+                <p class="text-green-100 text-sm">Rayon de 25km (Pérols, Mauguio, Castelnau...)</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Contact</h4>
+                <ul class="space-y-2">
+                    <li><a href="tel:0649955298" class="text-green-100 hover:text-white font-bold"><i class="fas fa-phone mr-2"></i> 06 49 95 52 98</a></li>
+                    <li><a href="mailto:babferrer@icloud.com" class="text-green-100 hover:text-white"><i class="fas fa-envelope mr-2"></i> babferrer@icloud.com</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="border-t border-green-800 pt-8 text-center">
+            <p class="text-sm text-green-200 mb-2">&copy; 2025 Multitech34. Tous droits réservés.</p>
+            <p class="text-sm font-medium italic text-green-100 opacity-90">
+                "Créé avec IAmour pour <span class="text-red-500 animate-pulse">❤️</span> Lucille <span class="text-red-500 animate-pulse">❤️</span> Grâce à Dieu, pour sa gloire."
+            </p>
+        </div>
+    </footer>
+
+    <div class="madison-widget">
+        <button onclick="toggleMadison()" class="madison-button" aria-label="Ouvrir le chat"><i class="fas fa-comment-dots"></i></button>
+        <div id="madisonChat" class="madison-chat">
+            <div class="bg-primary text-white p-4 flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">🤖</span>
+                    <div>
+                        <span class="font-bold text-sm block">Madison AI</span>
+                        <span class="text-xs text-green-200 flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-1 animate-pulse"></span> En ligne</span>
+                    </div>
+                </div>
+                <button onclick="toggleMadison()" class="text-white hover:text-gray-200"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <div id="madisonMessages" class="flex-1 p-4 overflow-y-auto bg-gray-50"></div>
+            
+            <div class="p-4 bg-white border-t flex gap-2">
+                <input type="text" id="madisonInput" placeholder="Besoin d'un bricoleur ?" class="flex-1 border rounded-full px-4 py-2 text-sm focus:outline-none focus:border-primary">
+                <button onclick="sendMessage()" class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary-dark transition"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="multitech34.js"></script>
+    <script>
+        // Script Menu Mobile local (backup)
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
