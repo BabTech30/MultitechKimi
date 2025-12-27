@@ -1,39 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr" itemscope itemtype="https://schema.org/ProfessionalService">
+<html lang="fr" itemscope itemtype="https://schema.org/Plumber">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plombier Lattes (34970) - Multitech34 | Bastien | Services 24/7</title>
-    <meta name="description" content="Plombier et chauffagiste à Lattes (34970). Bastien - Multitech34: dépannage 24/7, installation, recherche de fuite. Intervention rapide sous 30 minutes.">
-    <meta name="keywords" content="plombier Lattes 34970, chauffagiste Lattes, dépannage plomberie Lattes, urgence plombier 34970, Multitech34 Lattes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- Schema.org LocalBusiness -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Multitech34 - Bastien - Plombier Lattes",
-        "description": "Services de plomberie et chauffage à Lattes (34970). Intervention 24/7, devis gratuit.",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "18 plan de New York",
-            "addressLocality": "Lattes",
-            "addressRegion": "Hérault",
-            "postalCode": "34970",
-            "addressCountry": "FR"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "43.5667",
-            "longitude": "3.9000"
-        },
-        "telephone": "+33649955298",
-        "openingHours": "24/7",
-        "serviceType": ["Plomberie", "Chauffage", "Climatisation", "Dépannage 24/7"]
-    }
-    </script>
-    
-    <!-- Tailwind CSS -->
+    <title>Plombier Lattes (34970) : Dépannage Urgence, Maurin & Port Ariane | Multitech34</title>
+    <meta name="description" content="Votre plombier chauffagiste voisin à Lattes. Intervention rapide sur Port Ariane, Maurin, Boirargues. Spécialiste calcaire, fuite et chauffe-eau. Bastien 24/7.">
+    <meta name="keywords" content="plombier lattes, urgence plomberie maurin, chauffagiste port ariane, débouchage wc boirargues, recherche fuite 34970, adoucisseur lattes">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -43,425 +18,231 @@
                         'primary': '#1a5f4a',
                         'secondary': '#16a085',
                         'accent': '#f39c12',
+                        'accent-hover': '#d35400',
                         'dark': '#2c3e50'
-                    }
+                    },
+                    fontFamily: { 'sans': ['Inter', 'sans-serif'] }
                 }
             }
         }
     </script>
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Multitech34 Lattes",
+      "image": "https://www.multi-technique-montpellier.fr/logo.png",
+      "telephone": "0649955298",
+      "url": "https://www.multi-technique-montpellier.fr/lattes.html",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "18 plan de New York",
+        "addressLocality": "Lattes",
+        "postalCode": "34970",
+        "addressCountry": "FR"
+      },
+      "areaServed": ["Lattes", "Maurin", "Boirargues"],
+      "priceRange": "€€"
+    }
+    </script>
+
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .madison-widget { position: fixed; bottom: 20px; right: 20px; z-index: 9999; }
+        .madison-button { background: linear-gradient(135deg, #1a5f4a, #16a085); width: 60px; height: 60px; border-radius: 50%; color: white; font-size: 24px; border: none; box-shadow: 0 4px 15px rgba(26, 95, 74, 0.4); cursor: pointer; transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; }
+        .madison-button:hover { transform: scale(1.1); }
+        .madison-chat { position: absolute; bottom: 80px; right: 0; width: 350px; height: 500px; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); transform: scale(0); transform-origin: bottom right; transition: transform 0.3s; display: flex; flex-direction: column; overflow: hidden; }
+        .madison-chat.active { transform: scale(1); }
+        .message-bubble { max-width: 80%; padding: 10px 15px; border-radius: 15px; font-size: 14px; }
     </style>
 </head>
 
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+            <div class="flex justify-between items-center h-20">
                 <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <h1 class="text-2xl font-bold text-primary">Multitech34</h1>
-                        <p class="text-sm text-gray-600">Bastien - Expert Plombier Lattes</p>
-                    </div>
+                    <a href="index.html" class="flex flex-col group">
+                        <span class="text-2xl font-bold text-primary tracking-tight group-hover:text-accent transition">Multitech34</span>
+                        <span class="text-xs text-gray-500 font-medium">Bastien - Lattes</span>
+                    </a>
                 </div>
                 
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="index.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Accueil</a>
-                        <a href="plomberie.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Plomberie</a>
-                        <a href="chauffage.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Chauffage</a>
-                        <a href="climatisation.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Climatisation</a>
-                        <a href="lattes.html" class="text-primary px-3 py-2 rounded-md text-sm font-medium border-b-2 border-primary">Lattes</a>
-                        <a href="montpellier.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Montpellier</a>
-                        <a href="contact.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
-                    </div>
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Accueil</a>
+                    <a href="plomberie.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Plomberie</a>
+                    <a href="chauffage.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Chauffage</a>
+                    <a href="climatisation.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Clim</a>
+                    <a href="depannage.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Multiservices</a>
+                    <a href="contact.html" class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg font-bold transition shadow-md">Contact</a>
+                </div>
+
+                <div class="hidden md:block lg:ml-4">
+                    <a href="tel:0649955298" class="inline-flex items-center px-4 py-2 border-2 border-accent text-accent font-bold rounded-lg hover:bg-accent hover:text-white transition-all transform hover:scale-105 animate-pulse-slow">
+                        <i class="fas fa-phone-alt mr-2"></i> 06 49 95 52 98
+                    </a>
                 </div>
                 
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-900 hover:text-primary focus:outline-none">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
+                <div class="lg:hidden flex items-center">
+                    <a href="tel:0649955298" class="mr-4 text-accent font-bold text-lg animate-pulse"><i class="fas fa-phone"></i></a>
+                    <button id="mobile-menu-button" class="text-gray-700 p-2 border border-gray-200 rounded"><i class="fas fa-bars text-2xl"></i></button>
                 </div>
             </div>
         </div>
-        
-        <div id="mobile-menu" class="md:hidden hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-                <a href="index.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
-                <a href="plomberie.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Plomberie</a>
-                <a href="chauffage.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Chauffage</a>
-                <a href="climatisation.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Climatisation</a>
-                <a href="lattes.html" class="text-primary block px-3 py-2 rounded-md text-base font-medium border-l-4 border-primary pl-4">Lattes</a>
-                <a href="montpellier.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Montpellier</a>
-                <a href="contact.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-bold text-gray-800 hover:bg-gray-50 border-b border-gray-100">🏠 Accueil</a>
+                <a href="plomberie.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">💧 Plomberie</a>
+                <a href="chauffage.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">🔥 Chauffage</a>
+                <a href="climatisation.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">❄️ Climatisation</a>
+                <a href="depannage.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">🛠️ Multiservices</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-md text-base font-bold text-white bg-primary mt-4 text-center">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary to-secondary text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="inline-flex items-center px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm font-medium mb-6">
-                    <i class="fas fa-map-marker-alt mr-2"></i>
-                    Lattes (34970) - Hérault
-                </div>
-                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                    Plombier & Chauffagiste
-                    <span class="block text-2xl lg:text-3xl font-normal text-green-200 mt-2">
-                        Intervention sous 30 minutes
-                    </span>
+    <section class="relative pt-32 pb-24 bg-primary overflow-hidden">
+        <div class="absolute inset-0 opacity-30 bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/e5/Lattes_-_Port_Ariane.jpg')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-white">
+            <div class="md:w-2/3">
+                <span class="text-accent font-bold tracking-wider uppercase mb-2 block">Intervention Locale 34970</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                    Votre Plombier Voisin <br>
+                    à <span class="text-accent">Lattes & Maurin.</span>
                 </h1>
-                <p class="text-xl mb-8 text-green-100 max-w-3xl mx-auto leading-relaxed">
-                    Services de plomberie et chauffage professionnels à <strong>Lattes (34970)</strong>. 
-                    Disponible 24/7 pour tous vos besoins en dépannage, installation et rénovation. 
-                    Intervention rapide garantie.
+                <p class="text-xl text-green-100 mb-8 max-w-2xl leading-relaxed">
+                    Je suis basé ici, à Lattes. En cas de fuite ou de panne, je suis chez vous en moins de 30 minutes. Pas de frais de déplacement exorbitants, juste un service de proximité.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="tel:0649955298" class="inline-flex items-center px-8 py-4 bg-white text-primary text-lg font-semibold rounded-lg hover:bg-gray-100 transition-colors">
-                        <i class="fas fa-phone mr-3"></i>
-                        06 49 95 52 98
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:0649955298" class="bg-accent hover:bg-accent-hover text-white px-8 py-3 rounded-lg font-bold text-center shadow-lg transition hover:scale-105">
+                        Urgence Lattoise
                     </a>
-                    <a href="contact.html" class="inline-flex items-center px-8 py-4 border-2 border-white text-white text-lg font-semibold rounded-lg hover:bg-white hover:text-primary transition-colors">
-                        <i class="fas fa-envelope mr-3"></i>
-                        Devis Gratuit
+                    <a href="#quartiers" class="bg-white/10 backdrop-blur border border-white/30 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold text-center transition">
+                        Mes zones
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services à Lattes -->
-    <section class="py-20 bg-white">
+    <section id="quartiers" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                    Nos Services à <span class="text-primary">Lattes</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Tous nos services de plomberie, chauffage et climatisation disponibles 
-                    à Lattes avec intervention rapide garantie.
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Je connais votre quartier</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Chaque secteur de Lattes a ses spécificités (pression d'eau, accès, type de construction). Je les maîtrise.
                 </p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Dépannage Urgence -->
-                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                    <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
-                            <i class="fas fa-exclamation-triangle"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Dépannage 24/7</h3>
-                        <p class="text-red-600 font-medium">URGENCE</p>
-                    </div>
-                    <p class="text-gray-600 mb-6 text-center">
-                        Intervention d'urgence 24h/24 et 7j/7 pour tous vos problèmes de plomberie et chauffage.
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition bg-gray-50 group">
+                    <div class="text-3xl mb-4 text-primary group-hover:scale-110 transition duration-300">⛵</div>
+                    <h3 class="font-bold text-xl mb-2 text-primary">Port Ariane</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Intervention fréquente dans les résidences (Vasarely, Rialto...). Je connais les accès parkings et les colonnes montantes.
                     </p>
-                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Fuite d'eau</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Canalisation bouchée</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Panne chauffage</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Intervention 30min</li>
-                    </ul>
-                    <div class="text-center">
-                        <a href="tel:0649955298" class="inline-flex items-center px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">
-                            <i class="fas fa-phone mr-2"></i>
-                            Appeler
-                        </a>
-                    </div>
                 </div>
-                
-                <!-- Installation -->
-                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                    <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
-                            <i class="fas fa-plus-circle"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Installation</h3>
-                        <p class="text-green-600 font-medium">Neuf & Rénovation</p>
-                    </div>
-                    <p class="text-gray-600 mb-6 text-center">
-                        Installation complète de sanitaires, chauffage et climatisation pour votre habitat.
+                <div class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition bg-gray-50 group">
+                    <div class="text-3xl mb-4 text-primary group-hover:scale-110 transition duration-300">🏡</div>
+                    <h3 class="font-bold text-xl mb-2 text-primary">Maurin</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Spécialiste des villas et maisons individuelles. Remplacement chaudière, rénovation salle de bain et gestion de l'arrosage.
                     </p>
-                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Sanitaires complets</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Chaudière gaz</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Climatisation réversible</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Devis gratuit</li>
-                    </ul>
-                    <div class="text-center">
-                        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
-                            <i class="fas fa-calculator mr-2"></i>
-                            Devis
-                        </a>
-                    </div>
                 </div>
-                
-                <!-- Recherche Fuite -->
-                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                    <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Recherche Fuite</h3>
-                        <p class="text-blue-600 font-medium">Détection Précise</p>
-                    </div>
-                    <p class="text-gray-600 mb-6 text-center">
-                        Détection de fuites d'eau avec équipement professionnel et méthodes non destructives.
+                <div class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition bg-gray-50 group">
+                    <div class="text-3xl mb-4 text-primary group-hover:scale-110 transition duration-300">🏢</div>
+                    <h3 class="font-bold text-xl mb-2 text-primary">Boirargues / Centre</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Proche de la zone commerciale et du tram. Dépannage rapide pour les commerces, bureaux et le vieux village.
                     </p>
-                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Détection acoustique</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Inspection vidéo</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Sans casse</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Réparation rapide</li>
-                    </ul>
-                    <div class="text-center">
-                        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                            <i class="fas fa-eye mr-2"></i>
-                            Diagnostic
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Zones Lattes -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                    Intervention dans tout <span class="text-primary">Lattes</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Je me déplace dans tous les quartiers de Lattes pour vos interventions rapides.
+    <section class="py-20 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h3 class="text-3xl font-bold text-dark mb-6">L'eau à Lattes est très dure (TH > 32°f)</h3>
+                <p class="text-gray-700 mb-4 text-lg">
+                    Vous avez remarqué ? Vos parois de douche blanchissent, le chauffe-eau fait du bruit, votre peau tire. C'est le calcaire lattois.
                 </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-200">
-                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-900 mb-2">Centre Ville</h3>
-                    <p class="text-sm text-gray-600">Intervention sous 30 minutes</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-accent mb-6">
+                    <p class="text-gray-800 font-semibold">
+                        <i class="fas fa-info-circle text-accent mr-2"></i>
+                        Un chauffe-eau non protégé à Lattes perd 50% de sa durée de vie.
+                    </p>
                 </div>
-                
-                <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-200">
-                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-900 mb-2">Résidentiel</h3>
-                    <p class="text-sm text-gray-600">Intervention sous 30 minutes</p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-200">
-                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
-                        <i class="fas fa-store"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-900 mb-2">Commerces</h3>
-                    <p class="text-sm text-gray-600">Intervention sous 30 minutes</p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-200">
-                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-900 mb-2">Entreprises</h3>
-                    <p class="text-sm text-gray-600">Intervention sous 30 minutes</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Avis Clients Lattes -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                    Avis de nos clients à <span class="text-primary">Lattes</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Découvrez ce que disent nos clients de Lattes de nos services.
+                <p class="text-gray-700 mb-8">
+                    <strong>La Solution :</strong> J'installe des adoucisseurs d'eau volumétriques (sans sel ou avec) parfaitement réglés pour notre réseau.
                 </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-50 rounded-xl p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        "Intervention rapide pour une fuite d'eau dans notre cuisine. Bastien est arrivé en 20 minutes 
-                        et a résolu le problème efficacement. Très professionnel !"
-                    </p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mr-3">M</div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Marie D.</div>
-                            <div class="text-sm text-gray-500">Résidente Lattes</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 rounded-xl p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        "Installation de notre nouvelle chaudière parfaitement réalisée. Devis clair, travail propre 
-                        et explications complètes. Je recommande vivement !"
-                    </p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mr-3">J</div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Jean P.</div>
-                            <div class="text-sm text-gray-500">Résident Lattes</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 rounded-xl p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        "Urgence un dimanche soir pour un WC bouché. Réponse immédiate et problème résolu en 30 minutes. 
-                        Service au top, merci Bastien !"
-                    </p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mr-3">S</div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Sophie M.</div>
-                            <div class="text-sm text-gray-500">Commerçante Lattes</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Rapide -->
-    <section class="py-20 bg-primary text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl lg:text-4xl font-bold mb-6">
-                Besoin d'un plombier à Lattes ?
-            </h2>
-            <p class="text-xl mb-8 text-green-100 max-w-3xl mx-auto">
-                Je suis disponible 24/7 pour toutes vos urgences à Lattes. 
-                Intervention rapide sous 30 minutes, devis gratuit.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:0649955298" class="inline-flex items-center px-8 py-4 bg-white text-primary text-lg font-semibold rounded-lg hover:bg-gray-100 transition-colors">
-                    <i class="fas fa-phone mr-3"></i>
-                    06 49 95 52 98
-                </a>
-                <a href="contact.html" class="inline-flex items-center px-8 py-4 border-2 border-white text-white text-lg font-semibold rounded-lg hover:bg-white hover:text-primary transition-colors">
-                    <i class="fas fa-envelope mr-3"></i>
-                    Devis Gratuit
+                <a href="plomberie.html" class="inline-block bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-dark transition">
+                    Protéger ma maison
                 </a>
             </div>
-            <p class="text-sm text-green-200 mt-6">
-                <i class="fas fa-clock mr-2"></i>
-                Intervention rapide sous 30 minutes à Lattes
-            </p>
+             <div class="md:w-1/2 flex justify-center text-[10rem] text-blue-200">
+                <i class="fas fa-tint-slash animate-pulse"></i>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Multitech34</h3>
-                    <p class="text-gray-400 mb-4">
-                        Expert en plomberie, chauffage et climatisation. 
-                        Intervention rapide et professionnelle.
-                    </p>
-                    <p class="text-sm text-gray-500">
-                        18 plan de New York<br>
-                        34970 Lattes
-                    </p>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="plomberie.html" class="hover:text-white transition-colors">Plomberie</a></li>
-                        <li><a href="chauffage.html" class="hover:text-white transition-colors">Chauffage</a></li>
-                        <li><a href="climatisation.html" class="hover:text-white transition-colors">Climatisation</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Devis gratuit</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">Zones</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="lattes.html" class="hover:text-white transition-colors">Lattes (34970)</a></li>
-                        <li><a href="montpellier.html" class="hover:text-white transition-colors">Montpellier (34000)</a></li>
-                        <li><a href="montpellier.html" class="hover:text-white transition-colors">Castelnau-le-Lez (34170)</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>
-                            <a href="tel:0649955298" class="hover:text-white transition-colors">
-                                <i class="fas fa-phone mr-2"></i>
-                                06 49 95 52 98
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:babferrer@icloud.com" class="hover:text-white transition-colors">
-                                <i class="fas fa-envelope mr-2"></i>
-                                babferrer@icloud.com
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+    <footer class="bg-[#0f2f24] text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4">Multitech34 Lattes</h3>
+                <p class="text-green-100 text-sm mb-6">Votre artisan voisin. Rapidité, confiance et travail soigné.</p>
             </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400 text-sm">
-                    © 2025 Multitech34 - Bastien. Tous droits réservés. 
-                    <span class="text-red-400">❤️ Pour Lucille ❤️</span>
-                </p>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Services</h4>
+                <ul class="space-y-2 text-sm text-green-100">
+                    <li><a href="plomberie.html" class="hover:text-white transition">Plomberie</a></li>
+                    <li><a href="chauffage.html" class="hover:text-white transition">Chauffage</a></li>
+                    <li><a href="climatisation.html" class="hover:text-white transition">Climatisation</a></li>
+                    <li><a href="depannage.html" class="hover:text-white transition">Multiservices</a></li>
+                </ul>
             </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Adresse</h4>
+                <p class="text-sm text-green-100 mb-2">18 plan de New York<br>34970 Lattes</p>
+                <p class="text-sm text-green-100 text-xs mt-2 italic">Siège Social</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Contact</h4>
+                <p class="text-sm text-green-100 mb-2"><a href="tel:0649955298" class="hover:text-white transition"><i class="fas fa-phone mr-2"></i> 06 49 95 52 98</a></p>
+                <p class="text-sm text-green-100"><a href="mailto:babferrer@icloud.com" class="hover:text-white transition"><i class="fas fa-envelope mr-2"></i> babferrer@icloud.com</a></p>
+            </div>
+        </div>
+        <div class="border-t border-green-900 pt-8 text-center">
+            <p class="text-sm text-green-200 mb-2">&copy; 2025 Multitech34. Tous droits réservés.</p>
+            <p class="text-sm font-medium italic text-green-100 opacity-90">
+                "Créé avec IAmour pour <span class="text-red-500 animate-pulse">❤️</span> Lucille <span class="text-red-500 animate-pulse">❤️</span> Grâce à Dieu, pour sa gloire."
+            </p>
         </div>
     </footer>
 
+    <div class="madison-widget">
+        <button onclick="toggleMadison()" class="madison-button"><i class="fas fa-comment-dots"></i></button>
+        <div id="madisonChat" class="madison-chat">
+            <div id="madisonMessages" class="flex-1 p-4 overflow-y-auto bg-gray-50"></div>
+            <div class="p-4 bg-white border-t flex gap-2">
+                <input type="text" id="madisonInput" placeholder="Vous habitez Lattes ?" class="flex-1 border rounded-full px-4 py-2 text-sm focus:outline-none">
+                <button onclick="sendMessage()" class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="multitech34.js"></script>
     <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) {
+            btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+        }
     </script>
 </body>
 </html>
