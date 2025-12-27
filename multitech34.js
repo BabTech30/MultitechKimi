@@ -150,7 +150,7 @@ window.toggleMadison = function() {
 
     // Premier message si vide
     if (isChatOpen && messages.children.length === 0) {
-        addMessage(`Bonjour ! 👋 Je suis Madison, l'assistante virtuelle de Bastien.<br>Une fuite ? Un projet Clim ? Dites-moi tout.`, 'madison');
+        addMessage(`Yo ✌️ Moi c'est Madis l'assistante virtuelle dévoué de Bastien.<br>Une fuite ? Un projet Clim ? Dites-moi tout.`, 'madison');
     }
 };
 
