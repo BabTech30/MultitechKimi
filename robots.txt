@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Plan du site pour indexation rapide
+Sitemap: https://www.multi-technique-montpellier.fr/sitemap.xml
