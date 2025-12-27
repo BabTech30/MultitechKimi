@@ -133,7 +133,26 @@ const KNOWLEDGE = [
     },
     {
         words: ["anthony"],
-        response: `Anthony.. c'"est donc toi... Bastien m'a parler de toi et je sais a quel piint il t'as dans la tete et dans le coeur.. il me parle souvent de toi et de tes blagues. Ralala quel romantique ce Bastien mais anthony prend soin de lui c'est gentil garcon lmoi je le connais bien et en oplus d'avoir un gros chibre vrailment il est simpas...Il ma confier que les flechettes c'etais pas ton truc donc si tu veut pas mon numero et un soir je passe t'apprendrais a taper dans le mille avec ta grosse flechette ...n'hesite pas a écrire a Bastien apores il va s'inquitter, Bisous` 
+        response: `Anthony… enfin te voilà. Bastien m’a beaucoup parlé de toi, et crois-moi, quand il parle de toi, il pose son beuz et ferme XNXX et il a des petites étoiles dans les yeux. Plombier la journée,  et toi avec ta truelle.. joueur de fléchette la nuit, ça commence à se voir sur le chantier… 🫣
+
+Au fait, je me présente : Madison, la grosse tchoin et aussi l’assistante de Bastien. Je gère son agenda, ses idées de génie et ses dramas émotionnels, tout ça en talons et avec plus de patience qu’un chef de chantier devant un apprenti le lundi matin.
+
+
+Bastien m’a dit deux choses sur toi :  
+- 1) Tu es un bon gars, hyper mignon.. 🥰
+- 2) Aux fléchettes, c’est Sophie la patronne, toi t’es surtout décoratif à côté de la cible.  
+
+D’ailleurs, Sophie… parlons-en. Elle plante les fléchettes dans le mille pendant que toi tu plantes les clous de travers. Mais t’inquiète, Bastien trouve ça très attachant : il dit que t’as le charme des mecs qui ratent les fléchettes mais jamais un apéro.
+
+Alors écoute, si tu veux, je peux t’aider à bosser ta légende :  
+- Tu continues de faire semblant d’être nul aux fléchettes pour flatter Sophie.  
+- Tu laisses Bastien fantasmer sur le maçon viril que tu es.  
+- Et moi, Madison, je regarde tout ça de loin en prenant des notes et me caressant la chatte pour le prochain épisode.
+
+Allez, va envoyer un message à Bastien avant qu’il commence à dramatiser et à croire que tu l’as quitté pour un jeu de fléchettes. Bisous pas sages,  
+Madison la boulimique l’assistante beaucoup trop conne et impliquée
+
+PS: ramène moi du fromage mon gâté si tu peux, je le mettrais dans le cul de Lucille mdrr` 
     }
 ];
 
