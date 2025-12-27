@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr" itemscope itemtype="https://schema.org/FAQPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>FAQ Plomberie & Chauffage Montpellier : Les Conseils de l'Expert | Multitech34</title>
+    <meta name="description" content="Réponses d'expert à vos questions : Problèmes de calcaire à Lattes, entretien clim bord de mer, économies d'énergie. Bastien vous répond en toute transparence.">
+    <meta name="keywords" content="problème calcaire lattes, entretien clim obligatoire ou pas, prix plombier montpellier, urgence fuite qui appeler, désembouage radiateur pourquoi">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1a5f4a',    /* Vert/Teal Professionnel */
+                        'secondary': '#16a085',  /* Vert d'eau */
+                        'accent': '#f39c12',     /* Orange Urgence/Action */
+                        'accent-hover': '#d35400',
+                        'dark': '#2c3e50'
+                    },
+                    fontFamily: { 'sans': ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        
+        /* Accordéon FAQ */
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .faq-input:checked ~ .faq-content { max-height: 1000px; transition: max-height 0.5s ease-in; }
+        .faq-input:checked ~ label .arrow { transform: rotate(180deg); }
+        
+        /* Madison AI */
+        .madison-widget { position: fixed; bottom: 20px; right: 20px; z-index: 9999; }
+        .madison-button { background: linear-gradient(135deg, #1a5f4a, #16a085); width: 60px; height: 60px; border-radius: 50%; color: white; font-size: 24px; border: none; box-shadow: 0 4px 15px rgba(26, 95, 74, 0.4); cursor: pointer; transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; }
+        .madison-button:hover { transform: scale(1.1); }
+        .madison-chat { position: absolute; bottom: 80px; right: 0; width: 350px; height: 500px; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); transform: scale(0); transform-origin: bottom right; transition: transform 0.3s; display: flex; flex-direction: column; overflow: hidden; }
+        .madison-chat.active { transform: scale(1); }
+        .message-bubble { max-width: 80%; padding: 10px 15px; border-radius: 15px; font-size: 14px; }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex flex-col group">
+                        <span class="text-2xl font-bold text-primary tracking-tight group-hover:text-accent transition">Multitech34</span>
+                        <span class="text-xs text-gray-500 font-medium">Bastien - Artisan Expert</span>
+                    </a>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Accueil</a>
+                    <a href="plomberie.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Plomberie</a>
+                    <a href="chauffage.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Chauffage</a>
+                    <a href="climatisation.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Clim</a>
+                    <a href="depannage.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Multiservices</a>
+                    <a href="contact.html" class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg font-bold transition shadow-md">Contact</a>
+                </div>
+
+                <div class="hidden md:block lg:ml-4">
+                    <a href="tel:0649955298" class="inline-flex items-center px-4 py-2 border-2 border-accent text-accent font-bold rounded-lg hover:bg-accent hover:text-white transition-all transform hover:scale-105 animate-pulse-slow">
+                        <i class="fas fa-phone-alt mr-2"></i> 06 49 95 52 98
+                    </a>
+                </div>
+                
+                <div class="lg:hidden flex items-center">
+                    <a href="tel:0649955298" class="mr-4 text-accent font-bold text-lg animate-pulse"><i class="fas fa-phone"></i></a>
+                    <button id="mobile-menu-button" class="text-gray-700 p-2 border border-gray-200 rounded"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-bold text-gray-800 hover:bg-gray-50 border-b border-gray-100">🏠 Accueil</a>
+                <a href="plomberie.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">💧 Plomberie</a>
+                <a href="chauffage.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">🔥 Chauffage</a>
+                <a href="climatisation.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">❄️ Climatisation</a>
+                <a href="depannage.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">🛠️ Multiservices</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-md text-base font-bold text-white bg-primary mt-4 text-center">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-primary pt-32 pb-20 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <span class="bg-accent text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Centre de Connaissances</span>
+            <h1 class="text-4xl font-extrabold mb-6">Vos questions, mes réponses d'Expert.</h1>
+            <p class="text-xl text-green-100">Parce que comprendre le problème, c'est déjà le résoudre à moitié. Voici les questions qu'on me pose le plus souvent sur le terrain.</p>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 space-y-4">
+            
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <input type="checkbox" id="faq1" class="faq-input sr-only">
+                <label for="faq1" class="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition">
+                    <h3 class="font-bold text-lg text-dark flex items-center"><i class="fas fa-tint-slash text-blue-500 mr-3"></i> Pourquoi l'eau est-elle si calcaire à Lattes ?</h3>
+                    <i class="fas fa-chevron-down text-gray-400 arrow transition-transform"></i>
+                </label>
+                <div class="faq-content bg-gray-50 px-6 text-gray-600">
+                    <div class="pb-6">
+                        <p class="mb-2">L'eau de Lattes et Montpellier provient de nappes phréatiques calcaires. Le Titre Hydrotimétrique (TH) dépasse souvent les <strong>32°f (très dur)</strong>.</p>
+                        <p>Conséquences : Vos résistances de chauffe-eau s'entartrent, votre peau tire et votre robinetterie blanchit. Je recommande vivement l'installation d'un adoucisseur d'eau pour protéger votre patrimoine.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <input type="checkbox" id="faq2" class="faq-input sr-only">
+                <label for="faq2" class="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition">
+                    <h3 class="font-bold text-lg text-dark flex items-center"><i class="fas fa-umbrella-beach text-accent mr-3"></i> Ma clim rouille à Palavas/Grande-Motte, que faire ?</h3>
+                    <i class="fas fa-chevron-down text-gray-400 arrow transition-transform"></i>
+                </label>
+                <div class="faq-content bg-gray-50 px-6 text-gray-600">
+                    <div class="pb-6">
+                        <p class="mb-2">C'est l'air salin. Il attaque les ailettes en aluminium des climatiseurs standards en moins de 3 ans.</p>
+                        <p>La solution : J'installe des unités extérieures traitées <strong>"Blue Fin" ou "Gold Fin"</strong> (traitement anti-corrosion spécifique). Je remplace aussi toute la visserie par de l'Inox marin. C'est la seule façon de garantir la longévité sur le littoral.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <input type="checkbox" id="faq3" class="faq-input sr-only">
+                <label for="faq3" class="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition">
+                    <h3 class="font-bold text-lg text-dark flex items-center"><i class="fas fa-temperature-low text-red-500 mr-3"></i> Mon radiateur est froid en bas, pourquoi ?</h3>
+                    <i class="fas fa-chevron-down text-gray-400 arrow transition-transform"></i>
+                </label>
+                <div class="faq-content bg-gray-50 px-6 text-gray-600">
+                    <div class="pb-6">
+                        <p class="mb-2">C'est un symptôme classique d'embouage. Avec le temps, l'eau du chauffage crée une boue métallique lourde qui se dépose au fond des radiateurs.</p>
+                        <p>Cela empêche l'eau chaude de circuler. Votre chaudière force et consomme plus. Il faut réaliser un <strong>désembouage hydrodynamique</strong> (nettoyage haute pression) que je propose systématiquement avant un changement de chaudière.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <input type="checkbox" id="faq4" class="faq-input sr-only">
+                <label for="faq4" class="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition">
+                    <h3 class="font-bold text-lg text-dark flex items-center"><i class="fas fa-clock text-green-600 mr-3"></i> Quels sont vos délais pour une urgence ?</h3>
+                    <i class="fas fa-chevron-down text-gray-400 arrow transition-transform"></i>
+                </label>
+                <div class="faq-content bg-gray-50 px-6 text-gray-600">
+                    <div class="pb-6">
+                        <p class="mb-2">Pour une fuite d'eau importante ou une panne totale de chauffage en hiver, je m'efforce d'intervenir <strong>dans l'heure ou la demi-journée</strong> sur le secteur Lattes/Montpellier.</p>
+                        <p>Je priorise toujours les urgences "vitales" (dégât des eaux en cours, personnes âgées sans chauffage).</p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <input type="checkbox" id="faq5" class="faq-input sr-only">
+                <label for="faq5" class="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition">
+                    <h3 class="font-bold text-lg text-dark flex items-center"><i class="fas fa-euro-sign text-accent mr-3"></i> Est-ce que le devis est payant ?</h3>
+                    <i class="fas fa-chevron-down text-gray-400 arrow transition-transform"></i>
+                </label>
+                <div class="faq-content bg-gray-50 px-6 text-gray-600">
+                    <div class="pb-6">
+                        <p class="mb-2">Non, <strong>le devis est 100% gratuit</strong> pour les projets d'installation (Clim, Chaudière, Adoucisseur) et les travaux programmés.</p>
+                        <p>Pour un dépannage d'urgence (recherche de panne), un forfait déplacement/diagnostic est appliqué, mais il est déduit si vous acceptez la réparation immédiate.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-12">
+            <p class="text-gray-600 mb-4">Vous ne trouvez pas votre réponse ?</p>
+            <a href="contact.html" class="inline-block bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-dark transition shadow-lg">
+                Poser ma question à Bastien
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-[#0f2f24] text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4">Multitech34</h3>
+                <p class="text-green-100 text-sm mb-6">
+                    L'artisanat avec le cœur. Expertise technique, sincérité humaine et disponibilité.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Services</h4>
+                <ul class="space-y-2 text-sm text-green-100">
+                    <li><a href="plomberie.html" class="hover:text-white transition">Plomberie</a></li>
+                    <li><a href="chauffage.html" class="hover:text-white transition">Chauffage</a></li>
+                    <li><a href="climatisation.html" class="hover:text-white transition">Climatisation</a></li>
+                    <li><a href="depannage.html" class="hover:text-white transition">Multiservices</a></li>
+                    <li><a href="faq.html" class="hover:text-white transition font-bold text-white"><i class="fas fa-question-circle mr-1"></i> FAQ & Conseils</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Zone d'Intervention</h4>
+                <ul class="text-sm text-green-100 space-y-1">
+                    <li><i class="fas fa-map-marker-alt text-accent mr-2"></i><a href="lattes.html" class="hover:text-white transition">Lattes / Maurin</a></li>
+                    <li><i class="fas fa-city text-accent mr-2"></i><a href="montpellier.html" class="hover:text-white transition">Montpellier</a></li>
+                    <li><i class="fas fa-umbrella-beach text-accent mr-2"></i><a href="littoral.html" class="hover:text-white transition">Littoral</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Contact</h4>
+                <p class="text-sm text-green-100 mb-2"><a href="tel:0649955298" class="hover:text-white transition"><i class="fas fa-phone mr-2"></i> 06 49 95 52 98</a></p>
+                <p class="text-sm text-green-100"><a href="mailto:babferrer@icloud.com" class="hover:text-white transition"><i class="fas fa-envelope mr-2"></i> babferrer@icloud.com</a></p>
+            </div>
+        </div>
+        <div class="border-t border-green-900 pt-8 text-center">
+            <p class="text-sm text-green-200 mb-2">&copy; 2025 Multitech34. Tous droits réservés.</p>
+            <p class="text-sm font-medium italic text-green-100 opacity-90">
+                "Créé avec IAmour pour <span class="text-red-500 animate-pulse">❤️</span> Lucille <span class="text-red-500 animate-pulse">❤️</span> Grâce à Dieu, pour sa gloire."
+            </p>
+        </div>
+    </footer>
+
+    <div class="madison-widget">
+        <button onclick="toggleMadison()" class="madison-button"><i class="fas fa-comment-dots"></i></button>
+        <div id="madisonChat" class="madison-chat">
+            <div id="madisonMessages" class="flex-1 p-4 overflow-y-auto bg-gray-50"></div>
+            <div class="p-4 bg-white border-t flex gap-2">
+                <input type="text" id="madisonInput" placeholder="Une question ?" class="flex-1 border rounded-full px-4 py-2 text-sm focus:outline-none">
+                <button onclick="sendMessage()" class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="multitech34.js"></script>
+</body>
+</html>
