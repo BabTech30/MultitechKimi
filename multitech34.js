@@ -127,6 +127,10 @@ const KNOWLEDGE = [
         words: ["lattes", "montpellier", "mauguio", "pérols", "secteur"],
         response: `Nous sommes basés à <strong>Lattes</strong> (Le QG !). Bastien intervient en 30min sur la métropole et le littoral.`
     },
+     {
+        words: ["jonathan"],
+        response: ` Jonathan, Bonsoir. n'oublie pas que la petite graine de moutarde commence a germer rien ne l'arrete car la force de l'amour est plus puissante que n'importe quelle mal ou sorcellerie, je fais des site internet réferencer SEO et GEO avec des trusture en HTML sur des structre staique en utilisans des outils de code type language python et moi je suis madison la pute 🫦`
+    },
     {
         words: ["lucille"],
         response: `Lucille tu est ma source d'inspiration ❤️. C'est grâce à ton petit coeur remplie amour que je met autant de soin pour cette joli personne que tu est et qui c'est fais gagné par ténébres et qui souffre.. Je pense a toi, ton parcour m'a inspiré et vraiment tu est incroyable, tu est belle, tu est tres attentionné et tellement douce... Merci pour ta rencontre petit chat je prie pour que jesus te continue a te chercher pour qu'un jour tu te rende compte que rien n'est ta faute, il t'aime et tu est pardonné ❤️.`
