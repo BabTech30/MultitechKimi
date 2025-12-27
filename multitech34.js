@@ -12,9 +12,9 @@
 
 const CONFIG = {
     name: "Madison",
-    bossName: "Bastien",
-    phone: "06 49 95 52 98",
-    email: "babferrer@icloud.com",
+    bossName: "Mr Ferrer",
+    phone: "06 49 95 52 98 priviligiez les SMS 🙏",
+    email: "multitech34000@gmail.com",
     sounds: true, // Activer les sons
     typingSpeed: 30, // Vitesse de frappe (ms par caractère)
     nightModeStart: 20, // 20h00
@@ -46,12 +46,12 @@ const KNOWLEDGE_BASE = [
     {
         triggers: ["bastien", "patron", "gérant", "artisan", "qui est"],
         weight: 8,
-        response: (ctx) => `${CONFIG.bossName} ? C'est l'âme de Multitech34. C'est un perfectionniste qui travaille avec le cœur. Il ne quitte jamais un chantier tant que tout n'est pas parfait.<br><br>Franchement, c'est rare de trouver un artisan aussi impliqué aujourd'hui.`
+        response: (ctx) => `${CONFIG.bossName} ? C'est l'âme de Multitech34. C'est un patron en or qui travaille avec le cœur surtout ! Il ne quitte pas un chantier tant que tout n'est pas a son goût.<br><br>Franchement, c'est rare de trouver un patron aussi impliqué aujourd'hui.`
     },
     {
-        triggers: ["lucille", "amour", "cœur"],
+        triggers: ["lucille",],
         weight: 10,
-        response: (ctx) => `Lucille est notre inspiration ❤️. C'est grâce à cet amour que nous mettons autant de soin dans chaque intervention. Merci de l'avoir remarqué.`
+        response: (ctx) => `Lucille tu est ma source d'inspiration ❤️. C'est grâce à ton petit coeur remplie amour que je met autant de soin pour cette joli personne que tu est et qui c'est fais gagné par ténébres et qui souffre.. Je pense a toi, ton parcour m'a inspiré et vraiment tu est incroyable, tu est belle, tu est tres attentionné et tellement douce... Merci pour ta rencontre petit chat je prie pour que jesus te continue a te chercher pour qu'un jour tu te rende compte que rien n'est ta faute, il t'aime et tu est pardonné ❤️.`
     },
     {
         triggers: ["horaire", "dispo", "quand", "ouvert", "fermé", "samedi", "dimanche"],
@@ -59,7 +59,7 @@ const KNOWLEDGE_BASE = [
         response: (ctx) => `Nous intervenons du Lundi au Samedi pour les chantiers. Pour les urgences vitales (grosses fuites), ${CONFIG.bossName} assure une astreinte même le dimanche.<br><br>Il ne compte pas ses heures quand un client est en difficulté.`
     },
     {
-        triggers: ["lattes", "montpellier", "pérols", "mauguio", "secteur", "zone", "loin"],
+        triggers: ["lattes", "montpellier", "pérols", "mauguio", "secteur", "zone", "loin", "herault", "communes"],
         weight: 4,
         response: (ctx) => `Nous sommes basés à Lattes (34970). ${CONFIG.bossName} intervient sur Montpellier Métropole et les alentours (environ 25km).<br><br>Être proche nous permet d'intervenir très vite !`
     }
@@ -117,7 +117,7 @@ function toggleMadison() {
             } else if (page.includes('clim')) {
                 greeting = `Bonjour ! Il fait trop chaud ? ☀️ Je suis Madison. Dites-moi tout sur votre projet clim.`;
             } else {
-                greeting = `Bonjour ! 👋 Je suis Madison, l'assistante virtuelle de ${CONFIG.bossName}.<br>Je suis là pour vous aider avec précision et bienveillance. Que puis-je faire pour vous ?`;
+                greeting = `Yo ✌️ Moi c'est Madis , l'assistante dévouer de ${CONFIG.bossName}.<br>Je suis là pour vous aider avec précision et bienveillance. Que puis-je faire pour vous ?`;
             }
         }
         
