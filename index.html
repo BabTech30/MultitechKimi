@@ -32,23 +32,58 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": ["Plumber", "HVACBusiness", "GeneralContractor"],
         "name": "Multitech34",
-        "image": "https://www.multi-technique-montpellier.fr/logo.png",
-        "telephone": "0649955298",
+        "alternateName": "Bastien Multitech34",
         "url": "https://www.multi-technique-montpellier.fr",
+        "logo": "https://www.multi-technique-montpellier.fr/logo.png",
+        "description": "Bastien, artisan expert RGE à Lattes et Montpellier. Spécialiste recherche de fuite, installation climatisation anti-corrosion et dépannage urgence 24/7.",
+        "telephone": "+33649955298",
+        "email": "babferrer@icloud.com",
         "priceRange": "€€",
         "address": {
             "@type": "PostalAddress",
+            "streetAddress": "18 plan de New York",
             "addressLocality": "Lattes",
             "postalCode": "34970",
+            "addressRegion": "Occitanie",
             "addressCountry": "FR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 43.5684,
+            "longitude": 3.9022
+        },
+        "areaServed": [
+            { "@type": "City", "name": "Lattes" },
+            { "@type": "City", "name": "Montpellier" },
+            { "@type": "City", "name": "Pérols" },
+            { "@type": "City", "name": "Palavas-les-Flots" },
+            { "@type": "City", "name": "La Grande-Motte" },
+            { "@type": "City", "name": "Mauguio" }
+        ],
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "20:00"
         },
         "founder": {
             "@type": "Person",
             "name": "Bastien",
-            "description": "Artisan polyvalent et pédagogue"
-        }
+            "jobTitle": "Artisan Plombier Chauffagiste Certifié"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services Techniques",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Recherche de Fuite Non Destructive" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Installation Pompe à Chaleur RGE" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entretien Climatisation Bactéricide" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Désembouage Radiateur" } }
+            ]
+        },
+        "knowsAbout": ["Plomberie sanitaire", "Génie climatique", "Électricité de dépannage", "Traitement de l'eau (Calcaire)", "Domotique chauffage"]
     }
     </script>
 
@@ -260,7 +295,7 @@
         </div>
     </section>
 
-    <footer class="bg-primary-dark text-white pt-16 pb-8">
+    <footer class="bg-[#0f2f24] text-white pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
             <div>
                 <h3 class="text-2xl font-bold mb-4">Multitech34</h3>
@@ -269,31 +304,30 @@
                 </p>
             </div>
             <div>
-                <h4 class="font-bold mb-4">Services</h4>
-                <ul class="text-green-100 text-sm space-y-2">
-                    <li><a href="plomberie.html" class="hover:text-white">Plomberie</a></li>
-                    <li><a href="chauffage.html" class="hover:text-white">Chauffage</a></li>
-                    <li><a href="climatisation.html" class="hover:text-white">Climatisation</a></li>
-                    <li><a href="depannage.html" class="hover:text-white">Multiservices</a></li>
+                <h4 class="font-bold text-lg mb-4">Services</h4>
+                <ul class="space-y-2 text-sm text-green-100">
+                    <li><a href="plomberie.html" class="hover:text-white transition">Plomberie</a></li>
+                    <li><a href="chauffage.html" class="hover:text-white transition">Chauffage</a></li>
+                    <li><a href="climatisation.html" class="hover:text-white transition">Climatisation</a></li>
+                    <li><a href="depannage.html" class="hover:text-white transition">Multiservices</a></li>
+                    <li><a href="faq.html" class="hover:text-white transition font-bold text-accent"><i class="fas fa-question-circle mr-1"></i> FAQ & Conseils</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold mb-4">Zones</h4>
-                <ul class="text-green-100 text-sm space-y-1">
-                    <li><i class="fas fa-map-marker-alt text-accent mr-2"></i><a href="lattes.html" class="hover:text-white">Lattes / Maurin</a></li>
-                    <li><i class="fas fa-city text-accent mr-2"></i><a href="montpellier.html" class="hover:text-white">Montpellier</a></li>
-                    <li><i class="fas fa-umbrella-beach text-accent mr-2"></i><a href="littoral.html" class="hover:text-white">Littoral (Palavas...)</a></li>
+                <h4 class="font-bold text-lg mb-4">Zone d'Intervention</h4>
+                <ul class="text-sm text-green-100 space-y-1">
+                    <li><i class="fas fa-map-marker-alt text-accent mr-2"></i><a href="lattes.html" class="hover:text-white transition">Lattes / Maurin</a></li>
+                    <li><i class="fas fa-city text-accent mr-2"></i><a href="montpellier.html" class="hover:text-white transition">Montpellier</a></li>
+                    <li><i class="fas fa-umbrella-beach text-accent mr-2"></i><a href="littoral.html" class="hover:text-white transition">Littoral</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold mb-4">Contact</h4>
-                <ul class="space-y-2">
-                    <li><a href="tel:0649955298" class="text-green-100 hover:text-white font-bold"><i class="fas fa-phone mr-2"></i> 06 49 95 52 98</a></li>
-                    <li><a href="mailto:babferrer@icloud.com" class="text-green-100 hover:text-white"><i class="fas fa-envelope mr-2"></i> babferrer@icloud.com</a></li>
-                </ul>
+                <h4 class="font-bold text-lg mb-4">Contact</h4>
+                <p class="text-sm text-green-100 mb-2"><a href="tel:0649955298" class="hover:text-white transition"><i class="fas fa-phone mr-2"></i> 06 49 95 52 98</a></p>
+                <p class="text-sm text-green-100"><a href="mailto:babferrer@icloud.com" class="hover:text-white transition"><i class="fas fa-envelope mr-2"></i> babferrer@icloud.com</a></p>
             </div>
         </div>
-        <div class="border-t border-green-800 pt-8 text-center">
+        <div class="border-t border-green-900 pt-8 text-center">
             <p class="text-sm text-green-200 mb-2">&copy; 2025 Multitech34. Tous droits réservés.</p>
             <p class="text-sm font-medium italic text-green-100 opacity-90">
                 "Créé avec IAmour pour <span class="text-red-500 animate-pulse">❤️</span> Lucille <span class="text-red-500 animate-pulse">❤️</span> Grâce à Dieu, pour sa gloire."
@@ -311,16 +345,7 @@
             </div>
         </div>
     </div>
+
     <script src="multitech34.js"></script>
-    <script>
-        // Script Menu Mobile
-        const btn = document.getElementById('mobile-menu-button');
-        const menu = document.getElementById('mobile-menu');
-        if(btn && menu) {
-            btn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-            });
-        }
-    </script>
 </body>
 </html>
