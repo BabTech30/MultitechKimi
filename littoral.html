@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr" itemscope itemtype="https://schema.org/Plumber">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Plombier Climatisation Littoral : Palavas, Grande-Motte, Grau-du-Roi | Multitech34</title>
+    <meta name="description" content="Intervention urgente sur le littoral (34/30). Spécialiste climatisation anti-corrosion bord de mer et dépannage résidences secondaires. Partenaire Syndics & Agences.">
+    <meta name="keywords" content="plombier grau du roi, climatisation grande motte, plombier palavas les flots, entretien clim anti-corrosion, urgence fuite aigues mortes">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1a5f4a',    /* Vert/Teal Professionnel */
+                        'secondary': '#16a085',  /* Vert d'eau */
+                        'accent': '#f39c12',     /* Orange Urgence */
+                        'accent-hover': '#d35400',
+                        'sea': '#0984e3',        /* Bleu Mer */
+                        'dark': '#2c3e50'
+                    },
+                    fontFamily: { 'sans': ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Multitech34 Littoral",
+      "image": "https://www.multi-technique-montpellier.fr/logo.png",
+      "telephone": "0649955298",
+      "url": "https://www.multi-technique-montpellier.fr/littoral.html",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "La Grande-Motte",
+        "addressRegion": "Occitanie",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        "Palavas-les-Flots", 
+        "Carnon", 
+        "La Grande-Motte", 
+        "Le Grau-du-Roi", 
+        "Aigues-Mortes"
+      ],
+      "priceRange": "€€"
+    }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .madison-widget { position: fixed; bottom: 20px; right: 20px; z-index: 9999; }
+        .madison-button { background: linear-gradient(135deg, #1a5f4a, #16a085); width: 60px; height: 60px; border-radius: 50%; color: white; font-size: 24px; border: none; box-shadow: 0 4px 15px rgba(26, 95, 74, 0.4); cursor: pointer; transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; }
+        .madison-button:hover { transform: scale(1.1); }
+        .madison-chat { position: absolute; bottom: 80px; right: 0; width: 350px; height: 500px; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); transform: scale(0); transform-origin: bottom right; transition: transform 0.3s; display: flex; flex-direction: column; overflow: hidden; }
+        .madison-chat.active { transform: scale(1); }
+        .message-bubble { max-width: 80%; padding: 10px 15px; border-radius: 15px; font-size: 14px; }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex flex-col group">
+                        <span class="text-2xl font-bold text-primary tracking-tight group-hover:text-accent transition">Multitech34</span>
+                        <span class="text-xs text-gray-500 font-medium">Bastien - Zone Littoral</span>
+                    </a>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Accueil</a>
+                    <a href="plomberie.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Plomberie</a>
+                    <a href="chauffage.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Chauffage</a>
+                    <a href="climatisation.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Clim</a>
+                    <a href="depannage.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Multiservices</a>
+                    <a href="contact.html" class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg font-bold transition shadow-md">Contact</a>
+                </div>
+
+                <div class="hidden md:block lg:ml-4">
+                    <a href="tel:0649955298" class="inline-flex items-center px-4 py-2 border-2 border-accent text-accent font-bold rounded-lg hover:bg-accent hover:text-white transition-all transform hover:scale-105 animate-pulse-slow">
+                        <i class="fas fa-phone-alt mr-2"></i> 06 49 95 52 98
+                    </a>
+                </div>
+                
+                <div class="lg:hidden flex items-center">
+                    <a href="tel:0649955298" class="mr-4 text-accent font-bold text-lg animate-pulse"><i class="fas fa-phone"></i></a>
+                    <button id="mobile-menu-button" class="text-gray-700 p-2 border border-gray-200 rounded"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-bold text-gray-800 hover:bg-gray-50 border-b border-gray-100">🏠 Accueil</a>
+                <a href="plomberie.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">💧 Plomberie</a>
+                <a href="chauffage.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">🔥 Chauffage</a>
+                <a href="climatisation.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">❄️ Climatisation</a>
+                <a href="depannage.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">🛠️ Multiservices</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-md text-base font-bold text-white bg-primary mt-4 text-center">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-24 bg-sea overflow-hidden">
+        <div class="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1545167622-3a6ac156f422?q=80&w=2000')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-800/80 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-white">
+            <div class="md:w-2/3">
+                <span class="text-cyan-300 font-bold tracking-wider uppercase mb-2 block">De Palavas au Grau-du-Roi</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
+                    Plomberie & Clim <br>
+                    <span class="text-white">Spéciale Bord de Mer.</span>
+                </h1>
+                <p class="text-xl text-blue-100 mb-8 max-w-2xl">
+                    L'air salin attaque vos installations. J'interviens avec des solutions traitées <strong>anti-corrosion</strong>. Réactivité totale pour les résidences secondaires et saisonnières.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:0649955298" class="bg-accent hover:bg-accent-hover text-white px-8 py-3 rounded-lg font-bold text-center">
+                        Urgence Plage
+                    </a>
+                    <a href="#solutions-mer" class="bg-white/10 backdrop-blur border border-white/30 text-white px-8 py-3 rounded-lg font-semibold text-center hover:bg-white/20 transition">
+                        Solutions Anti-Sel
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions-mer" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Le Sel est l'ennemi de votre Confort</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    À moins de 5km des côtes, une climatisation standard rouille en 3 ans. Ne jetez pas votre argent par les fenêtres.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <div class="bg-blue-50 p-8 rounded-2xl border-l-4 border-sea shadow-sm">
+                        <h3 class="text-2xl font-bold text-dark mb-4"><i class="fas fa-shield-alt text-sea mr-3"></i>Mon Expertise "Blue Fin"</h3>
+                        <p class="text-gray-700 mb-4 leading-relaxed">
+                            J'installe exclusivement des unités extérieures traitées <strong>Anti-Corrosion (Gold Fin / Blue Fin)</strong> sur La Grande-Motte et le Grau-du-Roi.
+                        </p>
+                        <p class="text-gray-700 mb-4 leading-relaxed">
+                            Pour les résidences secondaires fermées l'hiver : Je propose la domotique pour gérer l'humidité et couper l'eau à distance. Fini les mauvaises surprises à l'arrivée en vacances !
+                        </p>
+                        <ul class="space-y-2 mt-6">
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Protection vernis marin</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Visserie Inox obligatoire</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Contrat hivernage</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="https://images.unsplash.com/photo-1566373738010-d027b4034870?q=80&w=1000" alt="Appartement vue mer" class="rounded-xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Partenaire des Copros du Littoral</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-sea">
+                    <h3 class="font-bold text-xl mb-2 text-sea">Palavas & Carnon</h3>
+                    <p class="text-sm text-gray-600 mb-4">Rive Droite / Rive Gauche</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Intervention rapide en scooter l'été pour éviter les bouchons de la route des plages. Dépannage chauffe-eau urgent pour sauver la location.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-sea">
+                    <h3 class="font-bold text-xl mb-2 text-sea">Grande-Motte</h3>
+                    <p class="text-sm text-gray-600 mb-4">Couchant / Centre / Point Zéro</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Spécialiste des grands ensembles (Pyramides). Rénovation colonnes d'eau, recherche de fuite et vannes d'arrêt vieillissantes.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-sea">
+                    <h3 class="font-bold text-xl mb-2 text-sea">Grau-du-Roi & Port Camargue</h3>
+                    <p class="text-sm text-gray-600 mb-4">Marinas & Villas</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Maintenance des pompes de relevage et climatisation de marinas. Partenariats privilégiés avec les Agences Immobilières locales.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-dark text-white p-8 rounded-2xl text-center shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-accent/20 rounded-full blur-2xl"></div>
+                <h3 class="text-2xl font-bold mb-4 relative z-10"><i class="fas fa-key text-accent mr-2"></i>Agences de Location & Conciergeries</h3>
+                <p class="max-w-2xl mx-auto mb-6 text-gray-300 relative z-10">
+                    Un locataire sans eau chaude ou sans clim en plein août, c'est un remboursement assuré. <br>
+                    Avec mon <strong>Pack Saison</strong>, je deviens votre technicien prioritaire. Facturation claire, intervention 24/7.
+                </p>
+                <a href="contact.html" class="inline-block bg-accent hover:bg-accent-hover text-white px-8 py-3 rounded-lg font-bold transition relative z-10">
+                    Devenir Partenaire
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#0f2f24] text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4">Multitech34 Littoral</h3>
+                <p class="text-green-100 text-sm mb-6">L'expert technique du bord de mer. Protection anti-corrosion.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Services</h4>
+                <ul class="space-y-2 text-sm text-green-100">
+                    <li><a href="plomberie.html" class="hover:text-white transition">Plomberie</a></li>
+                    <li><a href="climatisation.html" class="hover:text-white transition font-bold text-white">Clim Anti-Corrosion</a></li>
+                    <li><a href="depannage.html" class="hover:text-white transition">Multiservices</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Secteur</h4>
+                <ul class="text-sm text-green-100 space-y-1">
+                    <li><i class="fas fa-umbrella-beach text-accent mr-2"></i>Palavas à Aigues-Mortes</li>
+                    <li><i class="fas fa-map-marker-alt text-accent mr-2"></i><a href="lattes.html" class="hover:text-white transition">Lattes / Maurin</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Contact</h4>
+                <p class="text-sm text-green-100 mb-2"><a href="tel:0649955298" class="hover:text-white transition"><i class="fas fa-phone mr-2"></i> 06 49 95 52 98</a></p>
+                <p class="text-sm text-green-100"><a href="mailto:babferrer@icloud.com" class="hover:text-white transition"><i class="fas fa-envelope mr-2"></i> babferrer@icloud.com</a></p>
+            </div>
+        </div>
+        <div class="border-t border-green-900 pt-8 text-center">
+            <p class="text-sm text-green-200 mb-2">&copy; 2025 Multitech34. Tous droits réservés.</p>
+            <p class="text-sm font-medium italic text-green-100 opacity-90">
+                "Créé avec IAmour pour <span class="text-red-500 animate-pulse">❤️</span> Lucille <span class="text-red-500 animate-pulse">❤️</span> Grâce à Dieu, pour sa gloire."
+            </p>
+        </div>
+    </footer>
+
+    <div class="madison-widget">
+        <button onclick="toggleMadison()" class="madison-button"><i class="fas fa-comment-dots"></i></button>
+        <div id="madisonChat" class="madison-chat">
+            <div id="madisonMessages" class="flex-1 p-4 overflow-y-auto bg-gray-50"></div>
+            <div class="p-4 bg-white border-t flex gap-2">
+                <input type="text" id="madisonInput" placeholder="Intervention plage ?" class="flex-1 border rounded-full px-4 py-2 text-sm focus:outline-none">
+                <button onclick="sendMessage()" class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="multitech34.js"></script>
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) {
+            btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+        }
+    </script>
+</body>
+</html>
