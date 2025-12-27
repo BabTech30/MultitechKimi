@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr" itemscope itemtype="https://schema.org/ProfessionalService">
+<html lang="fr" itemscope itemtype="https://schema.org/HVACBusiness">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chauffage - Multitech34 | Bastien | Expert Chauffagiste Lattes Montpellier</title>
-    <meta name="description" content="Services de chauffage professionnels à Lattes (34970) et Montpellier (34000). Installation chaudière, entretien, dépannage 24/7. Devis gratuit.">
-    <meta name="keywords" content="chauffagiste Lattes, chauffagiste Montpellier, installation chaudière, entretien chauffage, dépannage chauffage 24/7">
-    
-    <!-- Tailwind CSS -->
+    <title>Chauffagiste RGE Montpellier : Pompe à Chaleur, Désembouage & Entretien | Multitech34</title>
+    <meta name="description" content="Expert RGE : Installation Pompe à Chaleur, Entretien Chaudière et Désembouage technique à Montpellier. Économisez jusqu'à 30% d'énergie. Devis gratuit.">
+    <meta name="keywords" content="désembouage radiateur montpellier, entretien chaudière gaz lattes, installation thermostat connecté, pompe à chaleur daikin rge">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -18,391 +17,189 @@
                         'secondary': '#16a085',
                         'accent': '#f39c12',
                         'dark': '#2c3e50'
-                    }
+                    },
+                    fontFamily: { 'sans': ['Inter', 'sans-serif'] }
                 }
             }
         }
     </script>
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .madison-widget { position: fixed; bottom: 20px; right: 20px; z-index: 9999; }
+        .madison-button { background: linear-gradient(135deg, #1a5f4a, #16a085); width: 60px; height: 60px; border-radius: 50%; color: white; font-size: 24px; border: none; box-shadow: 0 4px 15px rgba(26, 95, 74, 0.4); cursor: pointer; transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; }
+        .madison-button:hover { transform: scale(1.1); }
+        .madison-chat { position: absolute; bottom: 80px; right: 0; width: 350px; height: 500px; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); transform: scale(0); transform-origin: bottom right; transition: transform 0.3s; display: flex; flex-direction: column; overflow: hidden; }
+        .madison-chat.active { transform: scale(1); }
+        .message-bubble { max-width: 80%; padding: 10px 15px; border-radius: 15px; font-size: 14px; }
     </style>
 </head>
 
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+            <div class="flex justify-between items-center h-20">
                 <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <h1 class="text-2xl font-bold text-primary">Multitech34</h1>
-                        <p class="text-sm text-gray-600">Bastien - Expert Chauffagiste</p>
-                    </div>
+                    <a href="index.html" class="flex flex-col">
+                        <span class="text-2xl font-bold text-primary tracking-tight">Multitech34</span>
+                        <span class="text-xs text-gray-500 font-medium">Bastien - Artisan Expert</span>
+                    </a>
                 </div>
-                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium transition">Accueil</a>
+                    <a href="plomberie.html" class="text-gray-600 hover:text-primary font-medium transition">Plomberie</a>
+                    <a href="chauffage.html" class="text-primary font-bold border-b-2 border-primary pb-1">Chauffage</a>
+                    <a href="climatisation.html" class="text-gray-600 hover:text-primary font-medium transition">Climatisation</a>
+                    <a href="depannage.html" class="text-gray-600 hover:text-primary font-medium transition">Multiservices</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary font-medium transition">Contact</a>
+                </div>
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="index.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Accueil</a>
-                        <a href="plomberie.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Plomberie</a>
-                        <a href="chauffage.html" class="text-primary px-3 py-2 rounded-md text-sm font-medium border-b-2 border-primary">Chauffage</a>
-                        <a href="climatisation.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Climatisation</a>
-                        <a href="lattes.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Lattes</a>
-                        <a href="montpellier.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Montpellier</a>
-                        <a href="contact.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
-                    </div>
+                    <a href="tel:0649955298" class="inline-flex items-center px-5 py-2.5 bg-accent hover:bg-accent-hover text-white font-bold rounded-lg transition-all shadow-md transform hover:scale-105">
+                        <i class="fas fa-phone-alt mr-2"></i> 06 49 95 52 98
+                    </a>
                 </div>
-                
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-900 hover:text-primary focus:outline-none">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 p-2"><i class="fas fa-bars text-2xl"></i></button>
                 </div>
             </div>
         </div>
-        
-        <div id="mobile-menu" class="md:hidden hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-                <a href="index.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
-                <a href="plomberie.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Plomberie</a>
-                <a href="chauffage.html" class="text-primary block px-3 py-2 rounded-md text-base font-medium border-l-4 border-primary pl-4">Chauffage</a>
-                <a href="climatisation.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Climatisation</a>
-                <a href="lattes.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Lattes</a>
-                <a href="montpellier.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Montpellier</a>
-                <a href="contact.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-            </div>
+        <div id="mobile-menu" class="md:hidden hidden glass-effect border-t px-4 py-4 space-y-2">
+            <a href="index.html" class="block py-2">Accueil</a>
+            <a href="plomberie.html" class="block py-2">Plomberie</a>
+            <a href="chauffage.html" class="block py-2 font-bold text-primary">Chauffage</a>
+            <a href="climatisation.html" class="block py-2">Climatisation</a>
+            <a href="depannage.html" class="block py-2">Multiservices</a>
+            <a href="contact.html" class="block py-2">Contact</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-orange-600 to-red-600 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="inline-flex items-center px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm font-medium mb-6">
-                    <i class="fas fa-fire mr-2"></i>
-                    Service Chauffagiste
-                </div>
-                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                    Chauffage
-                    <span class="block text-2xl lg:text-3xl font-normal text-orange-200 mt-2">
-                        Installation & Entretien Professionnel
-                    </span>
-                </h1>
-                <p class="text-xl mb-8 text-orange-100 max-w-3xl mx-auto leading-relaxed">
-                    Services complets de chauffage à <strong>Lattes (34970)</strong> et 
-                    <strong>Montpellier (34000)</strong>. Installation, entretien et dépannage 
-                    de tous types de systèmes de chauffage.
+    <section class="relative pt-32 pb-24 bg-gray-900 overflow-hidden">
+        <div class="absolute inset-0 opacity-30 bg-[url('https://images.unsplash.com/photo-1507646227500-4d389b0012be?q=80&w=2000')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-900/80 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-white">
+            <div class="md:w-2/3">
+                <span class="text-accent font-bold tracking-wider uppercase mb-2 block">Performance & Économies</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Chauffage RGE &<br> <span class="text-secondary">Optimisation Thermique.</span></h1>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+                    Réduisez vos factures. Je suis certifié RGE QualiPAC pour installer vos Pompes à Chaleur et optimiser vos réseaux (Désembouage & Thermostats).
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="tel:0649955298" class="inline-flex items-center px-8 py-4 bg-white text-orange-600 text-lg font-semibold rounded-lg hover:bg-gray-100 transition-colors">
-                        <i class="fas fa-phone mr-3"></i>
-                        06 49 95 52 98
-                    </a>
-                    <a href="contact.html" class="inline-flex items-center px-8 py-4 border-2 border-white text-white text-lg font-semibold rounded-lg hover:bg-white hover:text-orange-600 transition-colors">
-                        <i class="fas fa-envelope mr-3"></i>
-                        Devis Gratuit
-                    </a>
+                <div class="flex gap-4">
+                    <a href="#solutions" class="bg-accent hover:bg-accent-hover text-white px-8 py-3 rounded-lg font-bold">Solutions RGE</a>
+                    <a href="#maintenance" class="bg-white/10 backdrop-blur border border-white/30 text-white px-8 py-3 rounded-lg font-semibold">Entretien</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Détails -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="solutions" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                    Nos Services <span class="text-primary">Chauffage</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Installation, entretien et dépannage de tous vos équipements de chauffage 
-                    pour un confort optimal et une efficacité énergétique maximale.
-                </p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">L'Expertise Technique Avancée</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Au-delà de l'installation : la préservation de votre patrimoine.</p>
             </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Installation -->
-                <div class="bg-green-50 rounded-2xl p-8 border border-green-200">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl mr-4">
-                            <i class="fas fa-plus-circle"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-900">Installation</h3>
-                            <p class="text-green-600 font-medium">Nouvelle installation</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6">
-                        Installation complète de systèmes de chauffage adaptés à vos besoins et à votre budget. 
-                        Étude personnalisée et conseils d'expert.
-                    </p>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                            Chaudière gaz à condensation
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                            Pompe à chaleur air/eau
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                            Chauffage au sol (plancher chauffant)
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                            Radiateurs et sèche-serviettes
-                        </li>
-                    </ul>
-                    <div class="mt-6">
-                        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
-                            <i class="fas fa-calculator mr-2"></i>
-                            Devis installation
-                        </a>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="flex gap-6 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 shrink-0 bg-gray-800 rounded-full flex items-center justify-center text-3xl text-white"><i class="fas fa-biohazard"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Désembouage Hydrodynamique</h3>
+                        <p class="text-sm text-gray-600 font-semibold mb-2 uppercase">Vos radiateurs sont froids en bas ?</p>
+                        <p class="text-gray-600 text-sm">C'est de la boue. Elle tue votre chaudière et augmente votre conso de 15%. J'injecte un produit nettoyant + rinçage machine haute performance pour remettre votre réseau à neuf.</p>
                     </div>
                 </div>
-                
-                <!-- Entretien -->
-                <div class="bg-blue-50 rounded-2xl p-8 border border-blue-200">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl mr-4">
-                            <i class="fas fa-wrench"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-900">Entretien</h3>
-                            <p class="text-blue-600 font-medium">Maintenance préventive</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6">
-                        Entretien régulier de votre système de chauffage pour garantir son efficacité, 
-                        sa sécurité et sa longévité. Contrats d'entretien disponibles.
-                    </p>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                            Révision annuelle chaudière
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                            Purge et désembouage radiateurs
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                            Contrôle de la pression et des sécurités
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                            Nettoyage et réglage optimisé
-                        </li>
-                    </ul>
-                    <div class="mt-6">
-                        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            Planifier entretien
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Dépannage -->
-                <div class="bg-red-50 rounded-2xl p-8 border border-red-200">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center text-white text-2xl mr-4">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-900">Dépannage 24/7</h3>
-                            <p class="text-red-600 font-medium">Intervention rapide</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6">
-                        Dépannage d'urgence de votre chauffage 24h/24 et 7j/7. Diagnostic précis et réparation 
-                        rapide pour rétablir votre confort thermique.
-                    </p>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-red-500 mr-3"></i>
-                            Panne de chaudière ou chauffe-eau
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-red-500 mr-3"></i>
-                            Problème de thermostat ou programmateur
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-red-500 mr-3"></i>
-                            Fuite dans le circuit de chauffage
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-red-500 mr-3"></i>
-                            Bruits anormaux ou odeurs
-                        </li>
-                    </ul>
-                    <div class="mt-6">
-                        <a href="tel:0649955298" class="inline-flex items-center px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">
-                            <i class="fas fa-phone mr-2"></i>
-                            Appeler en urgence
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Chauffe-eau -->
-                <div class="bg-yellow-50 rounded-2xl p-8 border border-yellow-200">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-yellow-600 rounded-full flex items-center justify-center text-white text-2xl mr-4">
-                            <i class="fas fa-tint"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-900">Chauffe-eau</h3>
-                            <p class="text-yellow-600 font-medium">Eau chaude sanitaire</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6">
-                        Installation et entretien de chauffe-eau électriques, thermodynamiques ou solaires. 
-                        Remplacement et réparation de tous types de ballons.
-                    </p>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-yellow-500 mr-3"></i>
-                            Chauffe-eau électrique (tous volumes)
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-yellow-500 mr-3"></i>
-                            Ballon thermodynamique
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-yellow-500 mr-3"></i>
-                            Chauffe-eau solaire
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-yellow-500 mr-3"></i>
-                            Remplacement et réparation
-                        </li>
-                    </ul>
-                    <div class="mt-6">
-                        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors">
-                            <i class="fas fa-shopping-cart mr-2"></i>
-                            Commander
-                        </a>
+                <div class="flex gap-6 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 shrink-0 bg-green-50 rounded-full flex items-center justify-center text-3xl text-green-600"><i class="fas fa-wifi"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Thermostats Connectés (IoT)</h3>
+                        <p class="text-sm text-green-700 font-semibold mb-2 uppercase">Pilotez à la voix ou au doigt</p>
+                        <p class="text-gray-600 text-sm">Installation de solutions Netatmo, Google Nest ou Delta Dore. Programmez votre chauffage depuis votre lit ou votre bureau. Payez seulement ce que vous consommez.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Marques -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                    Marques <span class="text-primary">Partenaires</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Je travaille avec les plus grandes marques du secteur pour garantir qualité et fiabilité.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
-                <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-200">
-                    <div class="text-2xl font-bold text-primary">Saunier</div>
-                    <div class="text-sm text-gray-600">Duval</div>
+    <section id="maintenance" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12">Contrats d'Entretien</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <h3 class="font-bold text-lg mb-2">Entretien Chaudière Gaz</h3>
+                    <p class="text-sm text-gray-500 mb-4">Obligatoire Annuel</p>
+                    <div class="text-3xl font-bold text-primary mb-4">119€ <span class="text-sm font-normal text-gray-500">TTC</span></div>
+                    <ul class="text-sm space-y-2 mb-6">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Nettoyage corps de chauffe</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Contrôle CO (Sécurité)</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Attestation fournie</li>
+                    </ul>
                 </div>
-                <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-200">
-                    <div class="text-2xl font-bold text-primary">Frisquet</div>
-                    <div class="text-sm text-gray-600">Chaudières</div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-accent transform scale-105">
+                    <h3 class="font-bold text-lg mb-2">Entretien PAC (Pompe à Chaleur)</h3>
+                    <p class="text-sm text-gray-500 mb-4">Recommandé pour performance</p>
+                    <div class="text-3xl font-bold text-primary mb-4">149€ <span class="text-sm font-normal text-gray-500">TTC</span></div>
+                    <ul class="text-sm space-y-2 mb-6">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Nettoyage unités Ext/Int</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Contrôle étanchéité Gaz</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Réglage régulation</li>
+                    </ul>
                 </div>
-                <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-200">
-                    <div class="text-2xl font-bold text-primary">Vaillant</div>
-                    <div class="text-sm text-gray-600">Groupe</div>
-                </div>
-                <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-200">
-                    <div class="text-2xl font-bold text-primary">Worcester</div>
-                    <div class="text-sm text-gray-600">Bosch</div>
-                </div>
-                <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-200">
-                    <div class="text-2xl font-bold text-primary">Atlantic</div>
-                    <div class="text-sm text-gray-600">Chauffe-eau</div>
-                </div>
-                <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-200">
-                    <div class="text-2xl font-bold text-primary">Thermor</div>
-                    <div class="text-sm text-gray-600">Ballon</div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <h3 class="font-bold text-lg mb-2">Désembouage Complet</h3>
+                    <p class="text-sm text-gray-500 mb-4">Curatif & Préventif</p>
+                    <div class="text-3xl font-bold text-primary mb-4">Sur Devis</div>
+                    <p class="text-sm text-gray-500 mb-6">Le prix dépend du nombre de radiateurs et de la taille du réseau. Devis gratuit sur place.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Multitech34</h3>
-                    <p class="text-gray-400 mb-4">
-                        Expert en plomberie, chauffage et climatisation. 
-                        Intervention rapide et professionnelle.
-                    </p>
-                    <p class="text-sm text-gray-500">
-                        18 plan de New York<br>
-                        34970 Lattes
-                    </p>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="plomberie.html" class="hover:text-white transition-colors">Plomberie</a></li>
-                        <li><a href="chauffage.html" class="hover:text-white transition-colors">Chauffage</a></li>
-                        <li><a href="climatisation.html" class="hover:text-white transition-colors">Climatisation</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Devis gratuit</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">Zones</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="lattes.html" class="hover:text-white transition-colors">Lattes (34970)</a></li>
-                        <li><a href="montpellier.html" class="hover:text-white transition-colors">Montpellier (34000)</a></li>
-                        <li><a href="montpellier.html" class="hover:text-white transition-colors">Castelnau-le-Lez (34170)</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>
-                            <a href="tel:0649955298" class="hover:text-white transition-colors">
-                                <i class="fas fa-phone mr-2"></i>
-                                06 49 95 52 98
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:babferrer@icloud.com" class="hover:text-white transition-colors">
-                                <i class="fas fa-envelope mr-2"></i>
-                                babferrer@icloud.com
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+    <footer class="bg-primary-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4">Multitech34</h3>
+                <p class="text-green-100 text-sm">Chauffagiste RGE nouvelle génération.</p>
             </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400 text-sm">
-                    © 2025 Multitech34 - Bastien. Tous droits réservés. 
-                    <span class="text-red-400">❤️ Pour Lucille ❤️</span>
-                </p>
+            <div>
+                <h4 class="font-bold mb-4">Services</h4>
+                <ul class="text-green-100 text-sm space-y-2">
+                    <li><a href="plomberie.html">Plomberie</a></li>
+                    <li><a href="chauffage.html" class="font-bold text-white">Chauffage</a></li>
+                    <li><a href="depannage.html">Multiservices</a></li>
+                </ul>
             </div>
+            <div>
+                <h4 class="font-bold mb-4">Zone</h4>
+                <p class="text-green-100 text-sm">Montpellier & 25km</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Contact</h4>
+                <p class="text-green-100 text-sm"><a href="tel:0649955298">06 49 95 52 98</a></p>
+            </div>
+        </div>
+        <div class="border-t border-green-800 pt-8 text-center">
+            <p class="text-sm text-green-200 mb-2">&copy; 2025 Multitech34.</p>
+            <p class="text-sm font-medium italic text-green-100 opacity-90">"Créé avec IAmour pour <span class="text-red-500 animate-pulse">❤️</span> Lucille <span class="text-red-500 animate-pulse">❤️</span> Grâce à Dieu, pour sa gloire."</p>
         </div>
     </footer>
-
+    
+    <div class="madison-widget">
+        <button onclick="toggleMadison()" class="madison-button"><i class="fas fa-comment-dots"></i></button>
+        <div id="madisonChat" class="madison-chat">
+            <div id="madisonMessages" class="flex-1 p-4 overflow-y-auto bg-gray-50"></div>
+            <div class="p-4 bg-white border-t flex gap-2">
+                <input type="text" id="madisonInput" placeholder="Question chauffage ?" class="flex-1 border rounded-full px-4 py-2 text-sm">
+                <button onclick="sendMessage()" class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="multitech34.js"></script>
     <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
     </script>
 </body>
 </html>
