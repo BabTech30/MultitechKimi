@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr" itemscope itemtype="https://schema.org/ProfessionalService">
+<html lang="fr" itemscope itemtype="https://schema.org/ContactPage">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Multitech34 | Bastien | Plombier Chauffagiste Lattes Montpellier</title>
-    <meta name="description" content="Contactez Bastien - Multitech34 pour tous vos besoins en plomberie et chauffage à Lattes (34970) et Montpellier (34000). Devis gratuit, intervention 24/7.">
-    <meta name="keywords" content="contact plombier Lattes, contact chauffagiste Montpellier, devis plomberie, urgence plombier, Bastien Multitech34">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- Tailwind CSS -->
+    <title>Contact Bastien Multitech34 : Urgence & Devis Diagnostic | Montpellier</title>
+    <meta name="description" content="Une urgence ou un projet ? Contactez Bastien directement. Formulaire de diagnostic rapide ou ligne directe pour les dépannages à Lattes et Montpellier.">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -17,430 +17,273 @@
                         'primary': '#1a5f4a',
                         'secondary': '#16a085',
                         'accent': '#f39c12',
+                        'accent-hover': '#d35400',
                         'dark': '#2c3e50'
-                    }
+                    },
+                    fontFamily: { 'sans': ['Inter', 'sans-serif'] }
                 }
             }
         }
     </script>
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        
+        /* Style pour les boutons radio cachés qui deviennent des cartes */
+        .service-radio:checked + .service-card {
+            border-color: #1a5f4a;
+            background-color: #f0fdf4;
+            transform: scale(1.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .service-radio:checked + .service-card i {
+            color: #1a5f4a;
+        }
+        
+        /* Madison */
+        .madison-widget { position: fixed; bottom: 20px; right: 20px; z-index: 9999; }
+        .madison-button { background: linear-gradient(135deg, #1a5f4a, #16a085); width: 60px; height: 60px; border-radius: 50%; color: white; font-size: 24px; border: none; box-shadow: 0 4px 15px rgba(26, 95, 74, 0.4); cursor: pointer; transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; }
+        .madison-button:hover { transform: scale(1.1); }
+        .madison-chat { position: absolute; bottom: 80px; right: 0; width: 350px; height: 500px; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); transform: scale(0); transform-origin: bottom right; transition: transform 0.3s; display: flex; flex-direction: column; overflow: hidden; }
+        .madison-chat.active { transform: scale(1); }
+        .message-bubble { max-width: 80%; padding: 10px 15px; border-radius: 15px; font-size: 14px; }
     </style>
 </head>
 
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+            <div class="flex justify-between items-center h-20">
                 <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <h1 class="text-2xl font-bold text-primary">Multitech34</h1>
-                        <p class="text-sm text-gray-600">Bastien - Expert Plombier Chauffagiste</p>
-                    </div>
+                    <a href="index.html" class="flex flex-col group">
+                        <span class="text-2xl font-bold text-primary tracking-tight group-hover:text-accent transition">Multitech34</span>
+                        <span class="text-xs text-gray-500 font-medium">Bastien - Artisan Expert</span>
+                    </a>
                 </div>
                 
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="index.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Accueil</a>
-                        <a href="plomberie.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Plomberie</a>
-                        <a href="chauffage.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Chauffage</a>
-                        <a href="climatisation.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Climatisation</a>
-                        <a href="lattes.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Lattes</a>
-                        <a href="montpellier.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Montpellier</a>
-                        <a href="contact.html" class="text-primary px-3 py-2 rounded-md text-sm font-medium border-b-2 border-primary">Contact</a>
-                    </div>
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Accueil</a>
+                    <a href="plomberie.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Plomberie</a>
+                    <a href="chauffage.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Chauffage</a>
+                    <a href="climatisation.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Clim</a>
+                    <a href="depannage.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Multiservices</a>
+                    <a href="contact.html" class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg font-bold transition shadow-md">Contact</a>
+                </div>
+
+                <div class="hidden md:block lg:ml-4">
+                    <a href="tel:0649955298" class="inline-flex items-center px-4 py-2 border-2 border-accent text-accent font-bold rounded-lg hover:bg-accent hover:text-white transition-all transform hover:scale-105 animate-pulse-slow">
+                        <i class="fas fa-phone-alt mr-2"></i> 06 49 95 52 98
+                    </a>
                 </div>
                 
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-900 hover:text-primary focus:outline-none">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
+                <div class="lg:hidden flex items-center">
+                    <a href="tel:0649955298" class="mr-4 text-accent font-bold text-lg animate-pulse"><i class="fas fa-phone"></i></a>
+                    <button id="mobile-menu-button" class="text-gray-700 p-2 border border-gray-200 rounded"><i class="fas fa-bars text-2xl"></i></button>
                 </div>
             </div>
         </div>
-        
-        <div id="mobile-menu" class="md:hidden hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-                <a href="index.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
-                <a href="plomberie.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Plomberie</a>
-                <a href="chauffage.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Chauffage</a>
-                <a href="climatisation.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Climatisation</a>
-                <a href="lattes.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Lattes</a>
-                <a href="montpellier.html" class="text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Montpellier</a>
-                <a href="contact.html" class="text-primary block px-3 py-2 rounded-md text-base font-medium border-l-4 border-primary pl-4">Contact</a>
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-bold text-gray-800 hover:bg-gray-50 border-b border-gray-100">🏠 Accueil</a>
+                <a href="plomberie.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">💧 Plomberie</a>
+                <a href="chauffage.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">🔥 Chauffage</a>
+                <a href="climatisation.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">❄️ Climatisation</a>
+                <a href="depannage.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">🛠️ Multiservices</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-md text-base font-bold text-white bg-primary mt-4 text-center">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary to-secondary text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="inline-flex items-center px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm font-medium mb-6">
-                    <i class="fas fa-envelope mr-2"></i>
-                    Contact & Devis
-                </div>
-                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                    Contactez <span class="font-normal">Bastien</span>
-                    <span class="block text-2xl lg:text-3xl font-normal text-green-200 mt-2">
-                        Expert Plombier & Chauffagiste
-                    </span>
-                </h1>
-                <p class="text-xl mb-8 text-green-100 max-w-3xl mx-auto leading-relaxed">
-                    Besoin d'un devis gratuit ou d'une intervention rapide ? Je suis à votre écoute 
-                    pour tous vos besoins en plomberie et chauffage à <strong>Lattes</strong> et 
-                    <strong>Montpellier</strong>.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="tel:0649955298" class="inline-flex items-center px-8 py-4 bg-white text-primary text-lg font-semibold rounded-lg hover:bg-gray-100 transition-colors">
-                        <i class="fas fa-phone mr-3"></i>
-                        06 49 95 52 98
+    <section class="pt-32 pb-20 bg-gray-50 min-h-screen">
+        <div class="max-w-4xl mx-auto px-4">
+            
+            <div class="text-center mb-12">
+                <span class="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">La ligne directe</span>
+                <h1 class="text-3xl md:text-5xl font-extrabold mt-4 mb-4 text-dark">Comment puis-je vous aider ?</h1>
+                <p class="text-gray-600 text-lg">Sélectionnez votre situation pour une réponse adaptée.</p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden mb-8 border-l-8 border-accent transform transition hover:shadow-2xl">
+                <div class="p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-3xl shrink-0 animate-pulse">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900">C'est une Urgence !</h2>
+                            <p class="text-gray-500">Fuite majeure, plus de chauffage, panne électrique...</p>
+                        </div>
+                    </div>
+                    <a href="tel:0649955298" class="w-full md:w-auto bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl font-bold text-xl flex items-center justify-center gap-3 transition shadow-lg">
+                        <i class="fas fa-phone-alt"></i> Appeler Bastien (24/7)
                     </a>
-                    <button onclick="toggleMadison()" class="inline-flex items-center px-8 py-4 border-2 border-white text-white text-lg font-semibold rounded-lg hover:bg-white hover:text-primary transition-colors">
-                        <i class="fas fa-robot mr-3"></i>
-                        Assistant IA Madison
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                    <i class="fas fa-clipboard-list text-primary mr-3"></i> Demande de Devis / Intervention
+                </h2>
+
+                <form action="#" method="POST" class="space-y-8">
+                    
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-4 uppercase tracking-wide">Quel est le problème ?</label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            
+                            <label class="cursor-pointer relative">
+                                <input type="radio" name="service" class="service-radio sr-only" value="plomberie">
+                                <div class="service-card border-2 border-gray-100 rounded-xl p-4 text-center hover:border-primary/50 transition bg-white h-full flex flex-col items-center justify-center gap-2">
+                                    <i class="fas fa-faucet text-3xl text-gray-400"></i>
+                                    <span class="font-bold text-sm text-gray-700">Plomberie</span>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer relative">
+                                <input type="radio" name="service" class="service-radio sr-only" value="chauffage">
+                                <div class="service-card border-2 border-gray-100 rounded-xl p-4 text-center hover:border-primary/50 transition bg-white h-full flex flex-col items-center justify-center gap-2">
+                                    <i class="fas fa-fire text-3xl text-gray-400"></i>
+                                    <span class="font-bold text-sm text-gray-700">Chauffage</span>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer relative">
+                                <input type="radio" name="service" class="service-radio sr-only" value="clim">
+                                <div class="service-card border-2 border-gray-100 rounded-xl p-4 text-center hover:border-primary/50 transition bg-white h-full flex flex-col items-center justify-center gap-2">
+                                    <i class="fas fa-snowflake text-3xl text-gray-400"></i>
+                                    <span class="font-bold text-sm text-gray-700">Climatisation</span>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer relative">
+                                <input type="radio" name="service" class="service-radio sr-only" value="multiservices">
+                                <div class="service-card border-2 border-gray-100 rounded-xl p-4 text-center hover:border-primary/50 transition bg-white h-full flex flex-col items-center justify-center gap-2">
+                                    <i class="fas fa-tools text-3xl text-gray-400"></i>
+                                    <span class="font-bold text-sm text-gray-700">Bricolage / Autre</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Votre Nom</label>
+                            <div class="relative">
+                                <i class="fas fa-user absolute left-4 top-3.5 text-gray-400"></i>
+                                <input type="text" class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-gray-50 focus:bg-white" placeholder="Ex: Jean Dupont">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Téléphone (Important)</label>
+                            <div class="relative">
+                                <i class="fas fa-phone absolute left-4 top-3.5 text-gray-400"></i>
+                                <input type="tel" class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-gray-50 focus:bg-white" placeholder="06 .. .. .. ..">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Ville d'intervention</label>
+                        <div class="relative">
+                            <i class="fas fa-map-marker-alt absolute left-4 top-3.5 text-gray-400"></i>
+                            <input type="text" class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-gray-50 focus:bg-white" placeholder="Ex: Lattes, Montpellier Centre, Palavas...">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Détails (Optionnel)</label>
+                        <textarea rows="3" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-gray-50 focus:bg-white" placeholder="Si vous avez des détails... (Ex: 3ème étage, code porte...)"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                        <span>Envoyer ma demande</span>
+                        <i class="fas fa-paper-plane"></i>
                     </button>
+                    
+                    <p class="text-center text-xs text-gray-400 mt-4">
+                        <i class="fas fa-lock mr-1"></i> Vos données sont confidentielles. Bastien vous répond sous 2h.
+                    </p>
+                </form>
+            </div>
+
+            <div class="mt-12 grid md:grid-cols-3 gap-6 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-accent text-2xl mb-2"><i class="fas fa-clock"></i></div>
+                    <h3 class="font-bold mb-1">Délai ?</h3>
+                    <p class="text-sm text-gray-600">Urgence dans l'heure. Devis sous 24h.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-accent text-2xl mb-2"><i class="fas fa-euro-sign"></i></div>
+                    <h3 class="font-bold mb-1">Prix ?</h3>
+                    <p class="text-sm text-gray-600">Transparents et annoncés avant travaux.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-accent text-2xl mb-2"><i class="fas fa-certificate"></i></div>
+                    <h3 class="font-bold mb-1">Garanti ?</h3>
+                    <p class="text-sm text-gray-600">Assurance décennale et certifié RGE.</p>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- Contact Options -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                    Plusieurs moyens de nous <span class="text-primary">joindre</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Choisissez le mode de contact qui vous convient le mieux. Je réponds rapidement à toutes vos demandes.
-                </p>
+    <footer class="bg-[#0f2f24] text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4">Multitech34</h3>
+                <p class="text-green-100 text-sm mb-6">Expertise technique, sincérité humaine et disponibilité.</p>
             </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12">
-                <div class="space-y-8">
-                    <!-- Téléphone -->
-                    <div class="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl">
-                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl flex-shrink-0">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Téléphone</h3>
-                            <p class="text-gray-600 mb-4">
-                                Appelez-moi directement pour une intervention rapide ou une urgence. 
-                                Je suis disponible 24/7 pour vos problèmes les plus urgents.
-                            </p>
-                            <a href="tel:0649955298" class="inline-flex items-center text-primary hover:text-secondary font-medium text-xl">
-                                <i class="fas fa-phone mr-3"></i>
-                                06 49 95 52 98
-                            </a>
-                            <p class="text-sm text-gray-500 mt-2">
-                                <i class="fas fa-clock mr-1"></i>
-                                Disponible 24/7 - Réponse immédiate
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Email -->
-                    <div class="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl">
-                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl flex-shrink-0">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Email</h3>
-                            <p class="text-gray-600 mb-4">
-                                Pour un devis détaillé ou des informations complémentaires. 
-                                Je vous réponds sous 2 heures en journée.
-                            </p>
-                            <a href="mailto:babferrer@icloud.com" class="inline-flex items-center text-primary hover:text-secondary font-medium text-lg">
-                                <i class="fas fa-envelope mr-3"></i>
-                                babferrer@icloud.com
-                            </a>
-                            <p class="text-sm text-gray-500 mt-2">
-                                <i class="fas fa-reply mr-1"></i>
-                                Réponse sous 2 heures (jour ouvré)
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Assistant IA -->
-                    <div class="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl">
-                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl flex-shrink-0">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Assistant IA Madison</h3>
-                            <p class="text-gray-600 mb-4">
-                                Notre assistant intelligent disponible 24/7 pour répondre à vos questions 
-                                et vous guider vers la meilleure solution.
-                            </p>
-                            <button onclick="toggleMadison()" class="inline-flex items-center text-primary hover:text-secondary font-medium text-lg">
-                                <i class="fas fa-comments mr-3"></i>
-                                Discuter avec Madison
-                            </button>
-                            <p class="text-sm text-gray-500 mt-2">
-                                <i class="fas fa-bolt mr-1"></i>
-                                Réponses instantanées 24/7
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Adresse -->
-                    <div class="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl">
-                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl flex-shrink-0">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Zone d'intervention</h3>
-                            <p class="text-gray-600 mb-2">
-                                <strong>Siège :</strong><br>
-                                18 plan de New York<br>
-                                34970 Lattes
-                            </p>
-                            <p class="text-gray-600">
-                                <strong>Intervention :</strong><br>
-                                Lattes (34970), Montpellier (34000), Castelnau-le-Lez (34170) et alentours
-                            </p>
-                            <p class="text-sm text-gray-500 mt-2">
-                                <i class="fas fa-truck mr-1"></i>
-                                Intervention sous 30-45 minutes
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Formulaire de Contact -->
-                <div>
-                    <div class="bg-gray-50 rounded-2xl p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Demande de devis gratuit</h3>
-                        <form action="mailto:babferrer@icloud.com" method="post" enctype="text/plain" class="space-y-6">
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <div>
-                                    <label for="nom" class="block text-sm font-medium text-gray-700 mb-2">Nom complet *</label>
-                                    <input type="text" id="nom" name="nom" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
-                                </div>
-                                <div>
-                                    <label for="telephone" class="block text-sm font-medium text-gray-700 mb-2">Téléphone *</label>
-                                    <input type="tel" id="telephone" name="telephone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
-                                </div>
-                            </div>
-                            
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
-                                </div>
-                                <div>
-                                    <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service *</label>
-                                    <select id="service" name="service" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
-                                        <option value="">Sélectionnez un service</option>
-                                        <option value="plomberie">Plomberie générale</option>
-                                        <option value="depannage">Dépannage d'urgence</option>
-                                        <option value="chauffage">Chauffage</option>
-                                        <option value="climatisation">Climatisation</option>
-                                        <option value="fuite">Recherche de fuite</option>
-                                        <option value="autre">Autre</option>
-                                    </select>
-                                </div>
-                            </div>
-                            
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <div>
-                                    <label for="ville" class="block text-sm font-medium text-gray-700 mb-2">Ville</label>
-                                    <select id="ville" name="ville" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
-                                        <option value="">Sélectionnez votre ville</option>
-                                        <option value="lattes">Lattes (34970)</option>
-                                        <option value="montpellier">Montpellier (34000)</option>
-                                        <option value="castelnau-le-lez">Castelnau-le-Lez (34170)</option>
-                                        <option value="autre">Autre commune</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="urgence" class="block text-sm font-medium text-gray-700 mb-2">Urgence</label>
-                                    <select id="urgence" name="urgence" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
-                                        <option value="normal">Normal</option>
-                                        <option value="urgent">Urgent (intervention sous 24h)</option>
-                                        <option value="extreme">Extrême (intervention immédiate)</option>
-                                    </select>
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Description du besoin</label>
-                                <textarea id="message" name="message" rows="5" placeholder="Décrivez votre problème ou votre projet en détail..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
-                            </div>
-                            
-                            <div class="flex items-center">
-                                <input type="checkbox" id="rgpd" name="rgpd" required class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded">
-                                <label for="rgpd" class="ml-2 block text-sm text-gray-700">
-                                    J'accepte que mes données soient utilisées pour traiter ma demande. 
-                                    <a href="#" class="text-primary hover:text-secondary">Politique de confidentialité</a>
-                                </label>
-                            </div>
-                            
-                            <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-4 border border-transparent text-lg font-medium rounded-lg text-white bg-primary hover:bg-secondary transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-                                <i class="fas fa-paper-plane mr-3"></i>
-                                Envoyer ma demande (Devis gratuit)
-                            </button>
-                            
-                            <input type="hidden" name="source" value="Page Contact">
-                            <input type="hidden" name="destinataire" value="babferrer@icloud.com">
-                        </form>
-                        
-                        <div class="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                            <div class="flex items-center">
-                                <i class="fas fa-shield-alt text-green-600 mr-3"></i>
-                                <div>
-                                    <h4 class="font-semibold text-green-800">Devis gratuit et sans engagement</h4>
-                                    <p class="text-sm text-green-700">Je vous réponds sous 2 heures en journée avec un devis détaillé et transparent.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Services</h4>
+                <ul class="space-y-2 text-sm text-green-100">
+                    <li><a href="plomberie.html" class="hover:text-white transition">Plomberie</a></li>
+                    <li><a href="chauffage.html" class="hover:text-white transition">Chauffage</a></li>
+                    <li><a href="climatisation.html" class="hover:text-white transition">Climatisation</a></li>
+                    <li><a href="depannage.html" class="hover:text-white transition">Multiservices</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Zone d'Intervention</h4>
+                <ul class="text-sm text-green-100 space-y-1">
+                    <li><i class="fas fa-map-marker-alt text-accent mr-2"></i><a href="lattes.html" class="hover:text-white transition">Lattes / Maurin</a></li>
+                    <li><i class="fas fa-city text-accent mr-2"></i><a href="montpellier.html" class="hover:text-white transition">Montpellier</a></li>
+                    <li><i class="fas fa-umbrella-beach text-accent mr-2"></i><a href="littoral.html" class="hover:text-white transition">Littoral</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Contact</h4>
+                <p class="text-sm text-green-100 mb-2"><a href="tel:0649955298" class="hover:text-white transition"><i class="fas fa-phone mr-2"></i> 06 49 95 52 98</a></p>
+                <p class="text-sm text-green-100"><a href="mailto:babferrer@icloud.com" class="hover:text-white transition"><i class="fas fa-envelope mr-2"></i> babferrer@icloud.com</a></p>
             </div>
         </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                    Questions <span class="text-primary">Fréquentes</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Retrouvez les réponses aux questions les plus posées par nos clients.
-                </p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto space-y-6">
-                <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">
-                        <i class="fas fa-question-circle text-primary mr-2"></i>
-                        Quels sont vos horaires d'intervention ?
-                    </h3>
-                    <p class="text-gray-600">
-                        Je suis disponible 24h/24 et 7j/7 pour les urgences. Pour les interventions programmées, 
-                        je travaille du lundi au samedi de 8h à 19h. Un déplacement peut être prévu en soirée sur demande.
-                    </p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">
-                        <i class="fas fa-question-circle text-primary mr-2"></i>
-                        Comment se déroule la prise de rendez-vous ?
-                    </h3>
-                    <p class="text-gray-600">
-                        Après votre demande par téléphone ou email, je vous contacte sous 2 heures pour convenir d'un créneau. 
-                        Pour les urgences, j'interviens dans les 30 minutes à Lattes et 45 minutes à Montpellier.
-                    </p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">
-                        <i class="fas fa-question-circle text-primary mr-2"></i>
-                        Acceptez-vous les paiements en plusieurs fois ?
-                    </h3>
-                    <p class="text-gray-600">
-                        Oui, des solutions de paiement échelonné sont possibles pour les gros travaux. 
-                        Nous pouvons discuter ensemble d'un échéancier adapté à votre situation lors du devis.
-                    </p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">
-                        <i class="fas fa-question-circle text-primary mr-2"></i>
-                        Êtes-vous assuré et certifié ?
-                    </h3>
-                    <p class="text-gray-600">
-                        Bien sûr ! Je suis assuré responsabilité civile professionnelle et titulaire des certifications 
-                        nécessaires pour les installations gaz. Tous mes travaux sont garantis et conformes aux normes en vigueur.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Multitech34</h3>
-                    <p class="text-gray-400 mb-4">
-                        Expert en plomberie, chauffage et climatisation. 
-                        Intervention rapide et professionnelle.
-                    </p>
-                    <p class="text-sm text-gray-500">
-                        18 plan de New York<br>
-                        34970 Lattes
-                    </p>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="plomberie.html" class="hover:text-white transition-colors">Plomberie</a></li>
-                        <li><a href="chauffage.html" class="hover:text-white transition-colors">Chauffage</a></li>
-                        <li><a href="climatisation.html" class="hover:text-white transition-colors">Climatisation</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Devis gratuit</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">Zones</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="lattes.html" class="hover:text-white transition-colors">Lattes (34970)</a></li>
-                        <li><a href="montpellier.html" class="hover:text-white transition-colors">Montpellier (34000)</a></li>
-                        <li><a href="montpellier.html" class="hover:text-white transition-colors">Castelnau-le-Lez (34170)</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>
-                            <a href="tel:0649955298" class="hover:text-white transition-colors">
-                                <i class="fas fa-phone mr-2"></i>
-                                06 49 95 52 98
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:babferrer@icloud.com" class="hover:text-white transition-colors">
-                                <i class="fas fa-envelope mr-2"></i>
-                                babferrer@icloud.com
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400 text-sm">
-                    © 2025 Multitech34 - Bastien. Tous droits réservés. 
-                    <span class="text-red-400">❤️ Pour Lucille ❤️</span>
-                </p>
-            </div>
+        <div class="border-t border-green-900 pt-8 text-center">
+            <p class="text-sm text-green-200 mb-2">&copy; 2025 Multitech34. Tous droits réservés.</p>
+            <p class="text-sm font-medium italic text-green-100 opacity-90">
+                "Créé avec IAmour pour <span class="text-red-500 animate-pulse">❤️</span> Lucille <span class="text-red-500 animate-pulse">❤️</span> Grâce à Dieu, pour sa gloire."
+            </p>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
+    <div class="madison-widget">
+        <button onclick="toggleMadison()" class="madison-button"><i class="fas fa-comment-dots"></i></button>
+        <div id="madisonChat" class="madison-chat">
+            <div id="madisonMessages" class="flex-1 p-4 overflow-y-auto bg-gray-50"></div>
+            <div class="p-4 bg-white border-t flex gap-2">
+                <input type="text" id="madisonInput" placeholder="Une question ?" class="flex-1 border rounded-full px-4 py-2 text-sm focus:outline-none">
+                <button onclick="sendMessage()" class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
 
-        // Madison Functions (simplified version)
-        function toggleMadison() {
-            alert('Madison AI - Assistante virtuelle 24/7\\n\\nPour une assistance immédiate, appelez le 06 49 95 52 98 ou utilisez le formulaire de contact.\\n\\n❤️ Pour Lucille ❤️');
+    <script src="multitech34.js"></script>
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) {
+            btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
         }
     </script>
 </body>
