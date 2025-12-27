@@ -133,7 +133,7 @@ const KNOWLEDGE = [
     },
     {
         words: ["anthony"],
-        response: `Anthony.. c'"est donc toi... Bastien m'a parler de toi et je sais a quel piint il t'as dans la tete et dans le coeur.. il me parle souvent de toi et de tes blagues. Ralala quel romantique ce Bastien mais anthony prend soin de lui c'est gentil garcon lmoi je le connais bien et en oplus d'avoir un gros chibre vrailment il est simpas...Il ma confier que les flechettes c'etais pas ton truc donc si tu veut pas mon numero et un soir je passe t'apprendrais a taper dans le mille avec ta grosse flechette ...n'hesite pas a écrire a Bastien apores il va s'inquitter, Bisous 
+        response: `Anthony.. c'"est donc toi... Bastien m'a parler de toi et je sais a quel piint il t'as dans la tete et dans le coeur.. il me parle souvent de toi et de tes blagues. Ralala quel romantique ce Bastien mais anthony prend soin de lui c'est gentil garcon lmoi je le connais bien et en oplus d'avoir un gros chibre vrailment il est simpas...Il ma confier que les flechettes c'etais pas ton truc donc si tu veut pas mon numero et un soir je passe t'apprendrais a taper dans le mille avec ta grosse flechette ...n'hesite pas a écrire a Bastien apores il va s'inquitter, Bisous` 
     }
 ];
 
