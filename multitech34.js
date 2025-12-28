@@ -129,7 +129,9 @@ const KNOWLEDGE = [
     },
      {
         words: ["jonathan"],
-        response: ` Jonathan, Bonsoir. n'oublie pas que la petite graine de moutarde commence a germer rien ne l'arrete car la force de l'amour est plus puissante que n'importe quelle mal ou sorcellerie, je fais des site internet réferencer SEO et GEO avec des trusture en HTML sur des structre staique en utilisans des outils de code type language python et moi je suis madison la pute 🫦`
+        response: ` Jonathan, Bonsoir. n'oublie pas que la petite graine de moutarde commence a germer rien ne l'arrete car la force de l'amour est plus puissante que n'importe quelle mal ou sorcellerie, je fais des site internet réferencer SEO et GEO avec des trusture en HTML sur des structre staique en utilisans des outils de code type language python et moi je suis madison la pute 🫦
+        Johny assure appel la j'ai l'impression de te harceler apres je vais te saouler mon gaté.. mais si tu lis mon SMS et tout alors tu verra mon message rempli d'amour et de detresse bisous mon poulet 🐔
+        PS: je modifirais le texte de temps en temps pour te parler de dieu et chose qui ont du sens pour l'esprit, Apauvrir le corps pour nourir l'esprit, que la paix du christ soit avec toi 🛐✝️💯`
     },
     {
         words: ["lucille"],
