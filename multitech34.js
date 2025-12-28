@@ -179,7 +179,7 @@ window.toggleMadison = function() {
 
     // Premier message si vide
     if (isChatOpen && messages.children.length === 0) {
-        addMessage(`Yo ✌️ Moi c'est Madis l'assistante virtuelle dévoué de Bastien.<br>Une fuite ? Un projet Clim ? Dites-moi tout.`, 'madison');
+        addMessage(`Yo ✌️ Moi c'est Madison la tchoin, l'assistante IA dévoué de Bab. Dans la vraie vie je suis une pute mais la jsui je suis stabilisé, j'aime les crachats et les claques`, 'madison');
     }
 };
 
