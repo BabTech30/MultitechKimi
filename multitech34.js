@@ -134,6 +134,10 @@ const KNOWLEDGE = [
         PS: je modifirais le texte de temps en temps pour te parler de dieu et chose qui ont du sens pour l'esprit, Apauvrir le corps pour nourir l'esprit, que la paix du christ soit avec toi 🛐✝️💯`
     },
     {
+        words: ["ludo", "polki"],
+        response: `Ludo mon ami, la vie est courte et en meme temps elle peut etre longue. Les belles choses de la vie sont devant nous tous les jours, Dieu nous a fais une grace et c'est celle d'avoir le choix, c'est facile en soit mais c'est ce qu'il fais aussi sa difficulté. Dieu nous dieu aide toi et le ciel t'aidera et ben c'est vraie dieu nous voit il est dzns notre coeur a chacun d'entre nous a qui veut le voir. Chaque personne qui se fais violence au corps pour nourrire son l'esprit, alors par amour pour nous, dieu le voit n'en doute meme pas mon frere. Dieu entend meme les cris des coeurs les plus silencieux ✝️🙏.  L'amour, le pardon, l'humilité sont des valeurs qui nourrisse le coeur et l'esprit. je voulais te partager simplement avec mon coeur pour toi et toutes les personnes a qui ce message peut apporter un peu de bonheur et de reconfort dans ce monde de brute, mais on est pas seul ✝️ Bon dimanche mon frero d'amour`
+    },
+    {
         words: ["lucille"],
         response: `Lucille tu est ma source d'inspiration ❤️. C'est grâce à ton petit coeur remplie amour que je met autant de soin pour cette joli personne que tu est et qui c'est fais gagné par ténébres et qui souffre.. Je pense a toi, ton parcour m'a inspiré et vraiment tu est incroyable, tu est belle, tu est tres attentionné et tellement douce... Merci pour ta rencontre petit chat je prie pour que jesus te continue a te chercher pour qu'un jour tu te rende compte que rien n'est ta faute, il t'aime et tu est pardonné ❤️.`
     },
